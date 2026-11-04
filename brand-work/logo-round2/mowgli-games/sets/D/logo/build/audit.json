@@ -1,0 +1,65 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "full-color: brand-2 #ffaa0a on #ffffff is 1.91:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "on-light-background: brand-2 #ffaa0a on #ffffff is 1.91:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "symbol-only: brand-2 #ffaa0a on #ffffff is 1.91:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.thin-feature",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.01,
+        "gap_px2": 0.89
+      },
+      "threshold": ">= 1 px = 5.0 units (heuristic, uncalibrated)",
+      "message": "symbol at 20 px (min size): strokes/gaps thinner than 1 px (lost 0.01 px², clogged 0.89 px²)",
+      "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+    },
+    {
+      "id": "logo.small-size",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.04,
+        "gap_px2": 1.12
+      },
+      "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+      "message": "symbol at 16 px: features narrower than 1 px (lost 0.04 px², clogged 1.12 px²)",
+      "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "display": {
+    "family": "Bagel Fat One",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\bagelfatone\\BagelFatOne-Regular.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "IBM Plex Sans KR",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\ibmplexsanskr\\IBMPlexSansKR-Regular.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": []
+  }
+}

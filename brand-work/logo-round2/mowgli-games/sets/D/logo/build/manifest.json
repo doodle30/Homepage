@@ -1,0 +1,571 @@
+{
+  "schema": "brand-identity/logo-build@1",
+  "set": "D",
+  "type": "symbol+wordmark",
+  "font": {
+    "path": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\bagelfatone\\BagelFatOne-Regular.ttf",
+    "role": "display",
+    "location": {
+      "wght": 400
+    },
+    "license": "OFL-1.1",
+    "family": "Bagel Fat One"
+  },
+  "masters": {
+    "symbol": "master-symbol.svg",
+    "wordmark": "master-wordmark.svg",
+    "lockup-horizontal": "master-lockup-horizontal.svg",
+    "lockup-stacked": "master-lockup-stacked.svg",
+    "primary": "master-primary.svg"
+  },
+  "versions": {
+    "full-color": {
+      "svg": "full-color.svg",
+      "png": "full-color.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "wordmark"
+          ],
+          "hex": "#251913",
+          "area": 30298.44
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 1326.79
+        }
+      ]
+    },
+    "full-color-dark": {
+      "svg": "full-color-dark.svg",
+      "png": "full-color-dark.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "wordmark"
+          ],
+          "hex": "#f5f2f1",
+          "area": 30298.44
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 1326.79
+        }
+      ]
+    },
+    "one-color-dark": {
+      "svg": "one-color-dark.svg",
+      "png": "one-color-dark.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball",
+            "wordmark"
+          ],
+          "hex": "#251913",
+          "area": 31625.24
+        }
+      ]
+    },
+    "one-color-light": {
+      "svg": "one-color-light.svg",
+      "png": "one-color-light.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball",
+            "wordmark"
+          ],
+          "hex": "#f5f2f1",
+          "area": 31160.77
+        }
+      ]
+    },
+    "on-light-background": {
+      "svg": "on-light-background.svg",
+      "png": "on-light-background.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "light",
+      "ground": "#ffffff",
+      "ground_role": "background",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "wordmark"
+          ],
+          "hex": "#251913",
+          "area": 30298.44
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 1326.79
+        }
+      ]
+    },
+    "on-dark-background": {
+      "svg": "on-dark-background.svg",
+      "png": "on-dark-background.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "wordmark"
+          ],
+          "hex": "#f5f2f1",
+          "area": 29938.56
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 1222.21
+        }
+      ]
+    },
+    "on-light-primary": {
+      "svg": "on-light-primary.svg",
+      "png": "on-light-primary.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "light",
+      "ground": "#ffaa0a",
+      "ground_role": "primary",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball",
+            "wordmark"
+          ],
+          "hex": "#160d09",
+          "area": 31625.24
+        }
+      ]
+    },
+    "on-light-accent": {
+      "svg": "on-light-accent.svg",
+      "png": "on-light-accent.png",
+      "size": [
+        1024,
+        436
+      ],
+      "mode": "light",
+      "ground": "#694509",
+      "ground_role": "accent",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball",
+            "wordmark"
+          ],
+          "hex": "#ffffff",
+          "area": 31625.24
+        }
+      ]
+    },
+    "symbol-only": {
+      "svg": "symbol-only.svg",
+      "png": "symbol-only.png",
+      "size": [
+        977,
+        1024
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle"
+          ],
+          "hex": "#251913",
+          "area": 2004.9
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 452.51
+        }
+      ]
+    },
+    "favicon-16": {
+      "svg": "favicon-16.svg",
+      "png": "favicon-16.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle"
+          ],
+          "hex": "#251913",
+          "area": 2004.9
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 452.51
+        }
+      ]
+    },
+    "favicon-32": {
+      "svg": "favicon-32.svg",
+      "png": "favicon-32.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle"
+          ],
+          "hex": "#251913",
+          "area": 2004.9
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 452.51
+        }
+      ]
+    },
+    "favicon-48": {
+      "svg": "favicon-48.svg",
+      "png": "favicon-48.png",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle"
+          ],
+          "hex": "#251913",
+          "area": 2004.9
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 452.51
+        }
+      ]
+    },
+    "small-16-one-color-dark": {
+      "svg": "small-16-one-color-dark.svg",
+      "png": "small-16-one-color-dark.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball"
+          ],
+          "hex": "#251913",
+          "area": 2457.4
+        }
+      ]
+    },
+    "small-16-one-color-light": {
+      "svg": "small-16-one-color-light.svg",
+      "png": "small-16-one-color-light.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball"
+          ],
+          "hex": "#f5f2f1",
+          "area": 2326.14
+        }
+      ]
+    },
+    "small-32-one-color-dark": {
+      "svg": "small-32-one-color-dark.svg",
+      "png": "small-32-one-color-dark.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball"
+          ],
+          "hex": "#251913",
+          "area": 2457.4
+        }
+      ]
+    },
+    "small-32-one-color-light": {
+      "svg": "small-32-one-color-light.svg",
+      "png": "small-32-one-color-light.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball"
+          ],
+          "hex": "#f5f2f1",
+          "area": 2326.14
+        }
+      ]
+    },
+    "app-icon-512": {
+      "svg": "app-icon-512.svg",
+      "png": "app-icon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "light",
+      "ground": "#ffaa0a",
+      "ground_role": "primary",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "stone-bottom",
+            "stone-middle",
+            "ball"
+          ],
+          "hex": "#160d09",
+          "area": 2457.4
+        }
+      ]
+    }
+  },
+  "small": {},
+  "sources": {
+    "symbol": {
+      "sha256": "3392fee736066984d7230d39af6334de802d08634a66dde63a861f34f8ad9904"
+    }
+  },
+  "optics": {
+    "cap_height": 734.0,
+    "x_height": 527.0,
+    "upm": 1000,
+    "overshoot_top": 0.0,
+    "overshoot_bottom": 0.0041,
+    "x_overshoot_top": 0.0,
+    "stem": 28.747,
+    "crossbar": 20.027,
+    "crossbar_stem_ratio": 0.697
+  },
+  "glyphs": {
+    "wordmark": "wordmark-glyphs.json"
+  },
+  "primary": "lockup-horizontal",
+  "anchors": {
+    "symbol": 15
+  },
+  "clear_space": {
+    "unit": "cap-height",
+    "multiple": 1.0,
+    "units": 100.0
+  },
+  "grounds": [
+    {
+      "mode": "light",
+      "ground": "background",
+      "on": "full colour"
+    },
+    {
+      "mode": "dark",
+      "ground": "background",
+      "on": "full colour"
+    },
+    {
+      "mode": "light",
+      "ground": "primary",
+      "on": "onPrimary"
+    },
+    {
+      "mode": "light",
+      "ground": "accent",
+      "on": "onAccent"
+    }
+  ],
+  "favicon_source": "symbol",
+  "app_icon": {
+    "tile": "primary",
+    "mark": "onPrimary",
+    "content": 0.58,
+    "optical_lift": 0.015,
+    "source": "default"
+  }
+}

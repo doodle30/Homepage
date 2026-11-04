@@ -1,0 +1,86 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "full-color: brand-2 #ffaa0a on #ffffff is 1.91:1; carried by a tile in onPrimary #160d09",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "on-light-background: brand-2 #ffaa0a on #ffffff is 1.91:1; carried by a tile in onPrimary #160d09",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "symbol-only: brand-2 #ffaa0a on #ffffff is 1.91:1; carried by a tile in onPrimary #160d09",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-16: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-32: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-48: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.detail-creep",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 24,
+      "threshold": "relative",
+      "message": "symbol anchors grew 23 -> 24 without a named defect",
+      "suggested_fix": "name the one defect this round fixes in logo.defect, or remove the addition"
+    }
+  ]
+}

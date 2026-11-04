@@ -1,0 +1,651 @@
+{
+  "schema": "brand-identity/sets@1",
+  "sets": [
+    {
+      "identity": {
+        "set": {
+          "id": "A",
+          "name": "Peekaboo",
+          "recommended": true,
+          "mechanism": "A puffy m is a little hill, and two eyes peek over the top of it: the brand's letter becomes a character that is always about to play hide-and-seek.",
+          "expression_move": "The eyes; the wordmark beside them is plain cocoa or cream.",
+          "differs_by": "Turns the initial into a character instead of a tile or a mascot drawing."
+        },
+        "axes": {
+          "playful_serious": -2,
+          "quiet_loud": 0,
+          "warm_cool": -2,
+          "friend_authority": -1
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Bagel Fat One",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {},
+            "features": [],
+            "case": "lower",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "IBM Plex Sans KR",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {},
+            "features": [],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": null
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "A puffy yolk 'm' with two round eyes peeking over its humps.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "mowgli",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "lower"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "m": "brand-2",
+            "eyes": "text",
+            "wordmark": "text"
+          },
+          "tags": [
+            "letterform"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          }
+        },
+        "palette_build": {
+          "dark_bg": "#2a1d17",
+          "strategy": "mono"
+        },
+        "defaults_used": [
+          {
+            "id": "gold-brass-accent",
+            "why": "The user asked for a deep yellow key colour on dark (questionnaire A11) and picked set B's yolk; the flagged tone is that same yellow, not a gold accent added for warmth."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Type and palette are set B as picked by the user; only the logo is explored here.",
+            "evidence": "measured",
+            "source": "user choice 2026-11-05"
+          },
+          {
+            "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+            "evidence": "measured",
+            "source": "docs/brief/questionnaire.md A11"
+          },
+          {
+            "claim": "The symbol is built from the display face's own 'm', so mark and wordmark share one shape language.",
+            "evidence": "practice",
+            "source": "logo.md, lockups"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Peekaboo",
+        "direction": "Warm cocoa dark with one yolk yellow.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cocoa",
+            "hex": "#2a1d17",
+            "source": "chosen",
+            "locked": true,
+            "usage": "grounds and dark surfaces",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          },
+          {
+            "id": "brand-2",
+            "name": "Yolk",
+            "hex": "#ffaa0a",
+            "source": "chosen",
+            "locked": true,
+            "usage": "the mark's yellow part, buttons",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          }
+        ],
+        "feels": [
+          "sweet",
+          "squishy",
+          "cheerful"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path id=\"m\" data-glyphs=\"m\" data-cap=\"78\" data-x=\"50\" data-baseline=\"90\" data-anchor=\"middle\" data-color=\"brand-2\"/><circle id=\"gap-l\" cx=\"33\" cy=\"30\" r=\"18.5\" data-op=\"subtract\"/><circle id=\"gap-r\" cx=\"67\" cy=\"30\" r=\"18.5\" data-op=\"subtract\"/><g id=\"eyes\" data-color=\"text\"><circle id=\"eye-l\" cx=\"33\" cy=\"30\" r=\"15\"/><circle id=\"eye-r\" cx=\"67\" cy=\"30\" r=\"15\"/><circle id=\"pupil-l\" cx=\"38\" cy=\"33\" r=\"6.5\" data-op=\"subtract\"/><circle id=\"pupil-r\" cx=\"72\" cy=\"33\" r=\"6.5\" data-op=\"subtract\"/></g></svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": null
+    },
+    {
+      "identity": {
+        "set": {
+          "id": "B",
+          "name": "Bounce O",
+          "recommended": false,
+          "mechanism": "The name keeps bouncing: the o in mowgli is a yolk ball caught in the air just above the line, and that ball alone is the app icon.",
+          "expression_move": "One yellow ball in an otherwise plain wordmark.",
+          "differs_by": "A wordmark-only route whose one colour is a moving part, not a tint."
+        },
+        "axes": {
+          "playful_serious": -1,
+          "quiet_loud": -1,
+          "warm_cool": -1,
+          "friend_authority": -1
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Bagel Fat One",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {},
+            "features": [],
+            "case": "lower",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "IBM Plex Sans KR",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {},
+            "features": [],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": null
+        },
+        "logo": {
+          "type": "wordmark",
+          "concept": "'mowgli' in cocoa or cream; the o is a yolk ball lifted off the baseline mid-bounce.",
+          "symbol": null,
+          "wordmark": {
+            "text": "mowgli",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "lower"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal"
+          ],
+          "colors": {
+            "wordmark": "text",
+            "ball": "brand-2"
+          },
+          "tags": [
+            "letterform"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 24,
+            "mm": 7
+          },
+          "misuse": [
+            {
+              "do": "stretch"
+            },
+            {
+              "do": "rotate"
+            },
+            {
+              "do": "low-contrast"
+            },
+            {
+              "do": "effects"
+            },
+            {
+              "svg": "logo/misuse-1.svg",
+              "label": "Don't let the ball rest on the line"
+            },
+            {
+              "svg": "logo/misuse-2.svg",
+              "label": "Don't add a second yellow ball"
+            }
+          ]
+        },
+        "palette_build": {
+          "dark_bg": "#2a1d17",
+          "strategy": "mono"
+        },
+        "defaults_used": [
+          {
+            "id": "gold-brass-accent",
+            "why": "The user asked for a deep yellow key colour on dark (questionnaire A11) and picked set B's yolk; the flagged tone is that same yellow, not a gold accent added for warmth."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Type and palette are set B as picked by the user; only the logo is explored here.",
+            "evidence": "measured",
+            "source": "user choice 2026-11-05"
+          },
+          {
+            "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+            "evidence": "measured",
+            "source": "docs/brief/questionnaire.md A11"
+          },
+          {
+            "claim": "Only the ball is yellow, so the letters read on light and dark grounds alike.",
+            "evidence": "judgement"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Bounce O",
+        "direction": "Warm cocoa dark with one yolk yellow.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cocoa",
+            "hex": "#2a1d17",
+            "source": "chosen",
+            "locked": true,
+            "usage": "grounds and dark surfaces",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          },
+          {
+            "id": "brand-2",
+            "name": "Yolk",
+            "hex": "#ffaa0a",
+            "source": "chosen",
+            "locked": true,
+            "usage": "the mark's yellow part, buttons",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          }
+        ],
+        "feels": [
+          "sweet",
+          "squishy",
+          "cheerful"
+        ]
+      },
+      "symbol_svg": null,
+      "symbol_small_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect id=\"tile\" x=\"0\" y=\"0\" width=\"100\" height=\"100\" rx=\"26\" data-color=\"brand-1\"/><circle id=\"ball\" cx=\"50\" cy=\"43\" r=\"25\" data-color=\"brand-2\"/><ellipse id=\"shadow\" cx=\"50\" cy=\"82\" rx=\"21\" ry=\"5.5\" data-color=\"brand-2\"/></svg>",
+      "wordmark_detail_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\"><rect id=\"o-off\" x=\"105\" y=\"20\" width=\"82\" height=\"90\" data-op=\"subtract\" data-glyph=\"2\"/><circle id=\"ball\" cx=\"146.26\" cy=\"58\" r=\"33\" data-color=\"brand-2\"/></svg>",
+      "misuse_svgs": {
+        "misuse-1": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"3.134 -5.041 420.708 133.106\" data-kind=\"wordmark\"><g id=\"wordmark\" data-cap-height=\"100\" data-baseline=\"100\" data-advance=\"426.975\" data-overshoot=\"0.0000 0.0041\" data-x-height=\"71.798\" data-text=\"mowgli\" data-detail=\"1\" data-color=\"text\"><path d=\"M322.343 128.065Q314.033 128.065 308.242 126.294Q302.452 124.523 297.139 120.845Q292.507 117.575 290.599 111.717Q288.692 105.858 292.507 99.864Q294.959 96.185 298.025 94.823Q301.09 93.46 304.019 93.665Q306.948 93.869 309.128 94.959Q313.896 97.275 316.553 98.297Q319.21 99.319 322.616 99.319Q327.657 99.319 331.131 95.777Q334.605 92.234 334.605 85.831L334.605 74.796L332.153 74.796Q331.199 82.016 326.635 86.172Q322.071 90.327 314.169 90.327Q308.174 90.327 302.452 87.33Q296.73 84.332 293.052 77.793Q289.373 71.253 289.373 60.49Q289.373 44.687 296.322 36.921Q303.27 29.155 314.305 29.155Q321.935 29.155 327.384 34.264Q332.834 39.373 332.834 48.501L333.242 48.365L333.242 40.736Q333.242 35.967 336.308 32.357Q339.373 28.747 345.913 28.747Q352.861 28.747 355.926 32.357Q358.992 35.967 358.992 40.736L359.128 83.651Q359.264 97.82 355.654 107.766Q352.044 117.711 343.937 122.888Q335.831 128.065 322.343 128.065ZM16.485 100Q10.354 100 6.744 96.39Q3.134 92.779 3.134 87.466L3.134 42.371Q3.134 36.649 6.608 32.698Q10.082 28.747 16.485 28.747Q22.752 28.747 25.886 32.698Q29.019 36.649 29.019 42.643L29.019 49.455L31.471 49.455Q31.471 37.875 36.376 33.311Q41.281 28.747 48.501 28.747Q57.766 28.747 62.125 34.469Q66.485 40.191 66.485 49.455L68.937 49.455Q68.937 41.689 71.526 37.193Q74.114 32.698 78.134 30.722Q82.153 28.747 86.512 28.747Q95.368 28.747 99.523 32.97Q103.678 37.193 104.905 44.278Q106.131 51.362 106.131 60.218L106.131 87.466Q106.131 92.779 102.52 96.39Q98.91 100 92.916 100Q86.921 100 83.243 96.39Q79.564 92.779 79.564 87.466L79.564 63.351Q79.564 58.447 78.338 55.722Q77.112 52.997 73.433 52.997Q69.482 52.997 68.324 55.995Q67.166 58.992 67.166 63.624L67.166 87.466Q67.166 92.779 63.76 96.39Q60.354 100 54.36 100Q48.229 100 44.619 96.39Q41.008 92.779 41.008 87.466L41.008 63.351Q41.008 58.447 39.782 55.722Q38.556 52.997 35.014 52.997Q31.063 52.997 30.041 55.995Q29.019 58.992 29.019 63.624L29.019 87.466Q29.019 92.779 25.749 96.39Q22.48 100 16.485 100ZM213.215 100Q205.313 100 200.341 94.823Q195.368 89.646 191.281 77.793L180.926 47.003Q179.155 41.826 180.79 36.512Q182.425 31.199 188.283 29.292Q193.733 27.384 198.229 29.564Q202.725 31.744 204.496 37.057L215.668 70.436Q217.575 76.294 219.619 78.27Q221.662 80.245 225.068 79.155Q227.929 78.202 228.678 75Q229.428 71.798 226.703 63.896L221.117 47.003Q219.346 41.689 221.049 36.444Q222.752 31.199 228.61 29.292Q234.06 27.384 238.556 29.564Q243.052 31.744 244.823 37.057L256.267 71.935Q257.357 75.068 259.673 77.657Q261.989 80.245 265.668 79.155Q268.529 78.202 269.414 75.341Q270.3 72.48 269.074 68.665Q267.439 63.488 265.463 60.49Q263.488 57.493 261.648 55.313Q259.809 53.134 258.651 50.681Q257.493 48.229 257.221 44.005Q256.948 39.646 259.06 36.308Q261.172 32.97 264.782 31.063Q268.392 29.155 272.752 29.155Q279.428 29.155 283.583 33.583Q287.738 38.011 287.738 44.005Q287.738 46.185 287.057 49.728Q286.376 53.27 285.286 56.267L279.564 71.117Q277.793 76.022 275.545 81.131Q273.297 86.24 270.368 90.463Q267.439 94.687 263.624 97.343Q259.809 100 254.768 100Q246.049 100 240.804 95.504Q235.559 91.008 232.561 80.654L231.199 80.654Q229.428 89.101 225.341 94.55Q221.253 100 213.215 100ZM377.52 100Q370.845 100 367.507 96.458Q364.169 92.916 364.169 87.602L364.169 8.583Q364.169 2.725 367.507 -1.158Q370.845 -5.041 377.52 -5.041Q383.515 -5.041 386.785 -1.158Q390.055 2.725 390.055 8.311L390.055 87.602Q390.055 92.916 386.785 96.458Q383.515 100 377.52 100ZM410.354 100Q403.951 100 400.817 96.458Q397.684 92.916 397.684 87.602L397.684 41.008Q397.684 35.15 400.817 31.744Q403.951 28.338 410.354 28.338Q416.758 28.338 419.959 31.744Q423.161 35.15 423.161 40.736L423.161 87.602Q423.161 92.916 419.823 96.458Q416.485 100 410.354 100ZM396.73 12.943Q396.73 7.084 400.341 3.474Q403.951 -0.136 410.354 -0.136Q417.166 -0.136 420.504 3.406Q423.842 6.948 423.842 12.807Q423.842 18.529 420.504 22.003Q417.166 25.477 410.354 25.477Q403.678 25.477 400.204 22.003Q396.73 18.529 396.73 12.943ZM312.262 58.174Q312.262 65.531 322.071 65.531Q328.474 65.531 331.063 63.76Q333.651 61.989 333.651 58.174Q333.651 54.223 330.995 52.725Q328.338 51.226 321.935 51.226Q317.302 51.226 314.782 52.725Q312.262 54.223 312.262 58.174Z\"/><circle id=\"ball-dropped\" cx=\"146.26\" cy=\"67\" r=\"33\" data-color=\"brand-2\"/></g></svg>",
+        "misuse-2": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"3.134 -5.041 420.708 133.106\" data-kind=\"wordmark\"><g id=\"wordmark\" data-cap-height=\"100\" data-baseline=\"100\" data-advance=\"426.975\" data-overshoot=\"0.0000 0.0041\" data-x-height=\"71.798\" data-text=\"mowgli\" data-detail=\"1\" data-color=\"text\"><path d=\"M322.343 128.065Q314.033 128.065 308.242 126.294Q302.452 124.523 297.139 120.845Q292.507 117.575 290.599 111.717Q288.692 105.858 292.507 99.864Q294.959 96.185 298.025 94.823Q301.09 93.46 304.019 93.665Q306.948 93.869 309.128 94.959Q313.896 97.275 316.553 98.297Q319.21 99.319 322.616 99.319Q327.657 99.319 331.131 95.777Q334.605 92.234 334.605 85.831L334.605 74.796L332.153 74.796Q331.199 82.016 326.635 86.172Q322.071 90.327 314.169 90.327Q308.174 90.327 302.452 87.33Q296.73 84.332 293.052 77.793Q289.373 71.253 289.373 60.49Q289.373 44.687 296.322 36.921Q303.27 29.155 314.305 29.155Q321.935 29.155 327.384 34.264Q332.834 39.373 332.834 48.501L333.242 48.365L333.242 40.736Q333.242 35.967 336.308 32.357Q339.373 28.747 345.913 28.747Q352.861 28.747 355.926 32.357Q358.992 35.967 358.992 40.736L359.128 83.651Q359.264 97.82 355.654 107.766Q352.044 117.711 343.937 122.888Q335.831 128.065 322.343 128.065ZM16.485 100Q10.354 100 6.744 96.39Q3.134 92.779 3.134 87.466L3.134 42.371Q3.134 36.649 6.608 32.698Q10.082 28.747 16.485 28.747Q22.752 28.747 25.886 32.698Q29.019 36.649 29.019 42.643L29.019 49.455L31.471 49.455Q31.471 37.875 36.376 33.311Q41.281 28.747 48.501 28.747Q57.766 28.747 62.125 34.469Q66.485 40.191 66.485 49.455L68.937 49.455Q68.937 41.689 71.526 37.193Q74.114 32.698 78.134 30.722Q82.153 28.747 86.512 28.747Q95.368 28.747 99.523 32.97Q103.678 37.193 104.905 44.278Q106.131 51.362 106.131 60.218L106.131 87.466Q106.131 92.779 102.52 96.39Q98.91 100 92.916 100Q86.921 100 83.243 96.39Q79.564 92.779 79.564 87.466L79.564 63.351Q79.564 58.447 78.338 55.722Q77.112 52.997 73.433 52.997Q69.482 52.997 68.324 55.995Q67.166 58.992 67.166 63.624L67.166 87.466Q67.166 92.779 63.76 96.39Q60.354 100 54.36 100Q48.229 100 44.619 96.39Q41.008 92.779 41.008 87.466L41.008 63.351Q41.008 58.447 39.782 55.722Q38.556 52.997 35.014 52.997Q31.063 52.997 30.041 55.995Q29.019 58.992 29.019 63.624L29.019 87.466Q29.019 92.779 25.749 96.39Q22.48 100 16.485 100ZM213.215 100Q205.313 100 200.341 94.823Q195.368 89.646 191.281 77.793L180.926 47.003Q179.155 41.826 180.79 36.512Q182.425 31.199 188.283 29.292Q193.733 27.384 198.229 29.564Q202.725 31.744 204.496 37.057L215.668 70.436Q217.575 76.294 219.619 78.27Q221.662 80.245 225.068 79.155Q227.929 78.202 228.678 75Q229.428 71.798 226.703 63.896L221.117 47.003Q219.346 41.689 221.049 36.444Q222.752 31.199 228.61 29.292Q234.06 27.384 238.556 29.564Q243.052 31.744 244.823 37.057L256.267 71.935Q257.357 75.068 259.673 77.657Q261.989 80.245 265.668 79.155Q268.529 78.202 269.414 75.341Q270.3 72.48 269.074 68.665Q267.439 63.488 265.463 60.49Q263.488 57.493 261.648 55.313Q259.809 53.134 258.651 50.681Q257.493 48.229 257.221 44.005Q256.948 39.646 259.06 36.308Q261.172 32.97 264.782 31.063Q268.392 29.155 272.752 29.155Q279.428 29.155 283.583 33.583Q287.738 38.011 287.738 44.005Q287.738 46.185 287.057 49.728Q286.376 53.27 285.286 56.267L279.564 71.117Q277.793 76.022 275.545 81.131Q273.297 86.24 270.368 90.463Q267.439 94.687 263.624 97.343Q259.809 100 254.768 100Q246.049 100 240.804 95.504Q235.559 91.008 232.561 80.654L231.199 80.654Q229.428 89.101 225.341 94.55Q221.253 100 213.215 100ZM377.52 100Q370.845 100 367.507 96.458Q364.169 92.916 364.169 87.602L364.169 8.583Q364.169 2.725 367.507 -1.158Q370.845 -5.041 377.52 -5.041Q383.515 -5.041 386.785 -1.158Q390.055 2.725 390.055 8.311L390.055 87.602Q390.055 92.916 386.785 96.458Q383.515 100 377.52 100ZM410.354 100Q403.951 100 400.817 96.458Q397.684 92.916 397.684 87.602L397.684 41.008Q397.684 35.15 400.817 31.744Q403.951 28.338 410.354 28.338Q416.758 28.338 419.959 31.744Q423.161 35.15 423.161 40.736L423.161 87.602Q423.161 92.916 419.823 96.458Q416.485 100 410.354 100ZM396.73 12.943Q396.73 7.084 400.341 3.474Q403.951 -0.136 410.354 -0.136Q417.166 -0.136 420.504 3.406Q423.842 6.948 423.842 12.807Q423.842 18.529 420.504 22.003Q417.166 25.477 410.354 25.477Q403.678 25.477 400.204 22.003Q396.73 18.529 396.73 12.943ZM312.262 58.174Q312.262 65.531 322.071 65.531Q328.474 65.531 331.063 63.76Q333.651 61.989 333.651 58.174Q333.651 54.223 330.995 52.725Q328.338 51.226 321.935 51.226Q317.302 51.226 314.782 52.725Q312.262 54.223 312.262 58.174Z\"/><path data-color=\"brand-2\" data-parts=\"wordmark-detail-ball\" d=\"M179.26 58C179.26 76.225 164.485 91 146.26 91C128.035 91 113.26 76.225 113.26 58C113.26 39.775 128.035 25 146.26 25C164.485 25 179.26 39.775 179.26 58Z\"/></g><circle id=\"extra-ball-i\" cx=\"410.4\" cy=\"9\" r=\"15\" data-color=\"brand-2\"/></svg>"
+      }
+    },
+    {
+      "identity": {
+        "set": {
+          "id": "C",
+          "name": "Tuft",
+          "recommended": false,
+          "mechanism": "A wild kid's round head: a yolk circle with a windswept tuft of messy hair and two dot eyes, the smallest possible Mowgli.",
+          "expression_move": "The character; the wordmark stays plain.",
+          "differs_by": "A mascot reduced to one colour and four circles, so it still works as a 16 px icon."
+        },
+        "axes": {
+          "playful_serious": -2,
+          "quiet_loud": 1,
+          "warm_cool": -2,
+          "friend_authority": -2
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Bagel Fat One",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {},
+            "features": [],
+            "case": "lower",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "IBM Plex Sans KR",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {},
+            "features": [],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": null
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "A round yolk head with a windswept tuft of hair and two dot eyes.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "mowgli",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "lower"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "head": "brand-2",
+            "wordmark": "text"
+          },
+          "tags": [
+            "abstract-geometric"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          },
+          "device": "tile"
+        },
+        "palette_build": {
+          "dark_bg": "#2a1d17",
+          "strategy": "mono"
+        },
+        "defaults_used": [
+          {
+            "id": "gold-brass-accent",
+            "why": "The user asked for a deep yellow key colour on dark (questionnaire A11) and picked set B's yolk; the flagged tone is that same yellow, not a gold accent added for warmth."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Type and palette are set B as picked by the user; only the logo is explored here.",
+            "evidence": "measured",
+            "source": "user choice 2026-11-05"
+          },
+          {
+            "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+            "evidence": "measured",
+            "source": "docs/brief/questionnaire.md A11"
+          },
+          {
+            "claim": "The name refers to a wild child; the tuft hints at him without drawing a jungle, animal or leaf.",
+            "evidence": "judgement"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Tuft",
+        "direction": "Warm cocoa dark with one yolk yellow.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cocoa",
+            "hex": "#2a1d17",
+            "source": "chosen",
+            "locked": true,
+            "usage": "grounds and dark surfaces",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          },
+          {
+            "id": "brand-2",
+            "name": "Yolk",
+            "hex": "#ffaa0a",
+            "source": "chosen",
+            "locked": true,
+            "usage": "the mark's yellow part, buttons",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          }
+        ],
+        "feels": [
+          "sweet",
+          "squishy",
+          "cheerful"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><g id=\"head\" data-color=\"brand-2\"><circle id=\"face\" cx=\"50\" cy=\"58\" r=\"34\"/><circle id=\"tuft-1\" cx=\"54\" cy=\"25\" r=\"11\"/><circle id=\"tuft-2\" cx=\"70\" cy=\"28\" r=\"9.5\"/><circle id=\"tuft-3\" cx=\"83\" cy=\"36\" r=\"7.5\"/><circle id=\"eye-l\" cx=\"38\" cy=\"61\" r=\"6.5\" data-op=\"subtract\"/><circle id=\"eye-r\" cx=\"62\" cy=\"61\" r=\"6.5\" data-op=\"subtract\"/></g></svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": null
+    },
+    {
+      "identity": {
+        "set": {
+          "id": "D",
+          "name": "Pebbles",
+          "recommended": false,
+          "mechanism": "A small balancing act: two flat stones and a yolk ball perched slightly off-centre on top, about to wobble.",
+          "expression_move": "The off-centre yellow ball; stones and wordmark stay one colour.",
+          "differs_by": "Quiet and calm where casual games are usually loud, with one silly detail."
+        },
+        "axes": {
+          "playful_serious": -1,
+          "quiet_loud": -2,
+          "warm_cool": -1,
+          "friend_authority": 0
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Bagel Fat One",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {},
+            "features": [],
+            "case": "lower",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "IBM Plex Sans KR",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {},
+            "features": [],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": null
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "Two flat stones with a yolk ball balanced off-centre on top.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "mowgli",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "lower"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "stones": "text",
+            "ball": "brand-2",
+            "wordmark": "text"
+          },
+          "tags": [
+            "abstract-geometric"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          }
+        },
+        "palette_build": {
+          "dark_bg": "#2a1d17",
+          "strategy": "mono"
+        },
+        "defaults_used": [
+          {
+            "id": "gold-brass-accent",
+            "why": "The user asked for a deep yellow key colour on dark (questionnaire A11) and picked set B's yolk; the flagged tone is that same yellow, not a gold accent added for warmth."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Type and palette are set B as picked by the user; only the logo is explored here.",
+            "evidence": "measured",
+            "source": "user choice 2026-11-05"
+          },
+          {
+            "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+            "evidence": "measured",
+            "source": "docs/brief/questionnaire.md A11"
+          },
+          {
+            "claim": "Off-centre balance reads as playful tension; asymmetry reads as exciting (context-bound).",
+            "evidence": "limited",
+            "source": "Luffarelli et al. 2019b"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Pebbles",
+        "direction": "Warm cocoa dark with one yolk yellow.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cocoa",
+            "hex": "#2a1d17",
+            "source": "chosen",
+            "locked": true,
+            "usage": "grounds and dark surfaces",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          },
+          {
+            "id": "brand-2",
+            "name": "Yolk",
+            "hex": "#ffaa0a",
+            "source": "chosen",
+            "locked": true,
+            "usage": "the mark's yellow part, buttons",
+            "print": {
+              "lab_d50": null,
+              "cmyk": null,
+              "pantone_ref": null
+            }
+          }
+        ],
+        "feels": [
+          "sweet",
+          "squishy",
+          "cheerful"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><g id=\"stones\" data-color=\"text\"><ellipse id=\"stone-bottom\" cx=\"50\" cy=\"82\" rx=\"34\" ry=\"12\"/><ellipse id=\"stone-middle\" cx=\"45\" cy=\"56\" rx=\"23\" ry=\"10\"/></g><circle id=\"ball\" cx=\"62\" cy=\"33\" r=\"12\" data-color=\"brand-2\"/></svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": null
+    }
+  ]
+}

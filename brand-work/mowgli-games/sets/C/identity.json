@@ -1,0 +1,368 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Mowgli Games",
+    "tagline": "Soft, round, and a little silly.",
+    "languages": [
+      "en",
+      "ko"
+    ],
+    "doc_lang": "en",
+    "sector": "Independent casual game studio (one-person)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+        "ko": "모글리 게임즈는 누구나 쉽게 시작하고 즐길 수 있는, 말랑하고 장난스러운 캐주얼 게임을 만드는 인디 스튜디오입니다."
+      },
+      "nav": [
+        "Games",
+        "About",
+        "News",
+        "Contact"
+      ],
+      "cta": "See our games"
+    }
+  },
+  "set": {
+    "id": "C",
+    "name": "Bounce",
+    "recommended": false,
+    "mechanism": "Squash and stretch, the animation rule that makes things feel soft: a ball drawn in two frames (stretched, then squashed) is the mark, a tall stretched rounded face sets the type, and big yellow fields carry the near-black ink.",
+    "expression_move": "Whole yellow surfaces; the mark and type stay single-colour ink on top.",
+    "differs_by": "The loud route: yellow is the ground here, not the highlight, with dark kept for ink and imagery."
+  },
+  "axes": {
+    "playful_serious": -1,
+    "quiet_loud": 2,
+    "warm_cool": 0,
+    "friend_authority": -1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Dongle",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        700
+      ],
+      "location": {},
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Gowun Dodum",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {},
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "One ball in two frames: stretched in the air, squashed on landing. Also reads as a soft exclamation mark.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Mowgli Games",
+      "role": "display",
+      "location": null,
+      "tracking": 0,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "ball": "text",
+      "wordmark": "text"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [],
+  "rationale": [
+    {
+      "claim": "Dark imagery with a deep yellow key colour is the user's stated preference; this route flips the proportions.",
+      "evidence": "measured",
+      "source": "docs/brief/questionnaire.md A11"
+    },
+    {
+      "claim": "Squash and stretch is a core animation principle for soft, elastic motion, and gives the mark a built-in idle animation.",
+      "evidence": "practice",
+      "source": "Thomas & Johnston, The Illusion of Life (1981)"
+    },
+    {
+      "claim": "Yellow is vivid only when light and needs a dark partner, so ink is near-black.",
+      "evidence": "strong",
+      "source": "color.md, hue physics"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "d05ffc2df2d79483bd716ea18db0feff742469fab983638833ec4e442c7c6e1a"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 4,
+      "info": 11
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.accent-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.0,
+        "threshold": 3.0,
+        "message": "light: accent #ffc700 on background #ffc700 is 1.00:1, below 3.0:1 (accent fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.accent",
+          "from": "#ffc700",
+          "to": "#955a07",
+          "how": "use accent-700 (same scale)",
+          "ratio_after": 3.59
+        },
+        "roles": [
+          "light.accent",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.link-on-text",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.28,
+        "threshold": 3.0,
+        "message": "light: link #7e4704 on text #191b26 is 2.28:1, below 3.0:1 (links distinguishable from body text without underline (WCAG G183); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.link",
+          "from": "#7e4704",
+          "to": "#955a07",
+          "how": "use accent-700 (same scale)",
+          "ratio_after": 3.05
+        },
+        "roles": [
+          "light.link",
+          "light.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.39,
+        "threshold": 3.0,
+        "message": "light: border #c0ae84 on background #ffc700 is 1.39:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#c0ae84",
+          "to": "#827149",
+          "how": "darken by OKLCH L -0.20, same hue",
+          "ratio_after": 3.05
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.41,
+        "threshold": 3.0,
+        "message": "dark: link #ffc700 on text #f2f3f5 is 1.41:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#ffc700",
+          "to": "#b0730a",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.57
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.38,
+        "threshold": 3.0,
+        "message": "dark: border #535460 on background #16171f is 2.38:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#535460",
+          "to": "#71727d",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.74
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#ffc700 sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Dongle lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.coverage.ko_Kore.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "74/832",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Dongle lacks Korean auxiliary/punctuation characters: ᄀ-ᄒ ᅡ-ᅵ ᆨ-ᇂ 丘 串 乃 久 乖 九 乞 乫 乾 (+746)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.confusables",
+        "component": "type",
+        "severity": "info",
+        "measured": 0.909,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Dongle: I/l look alike at small sizes (IoU 0.91 at 48 px)",
+        "suggested_fix": "no ss/cv alternates; choose another face for small text and data"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 13,
+        "threshold": null,
+        "message": "Dongle: ~13 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Gowun Dodum lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.ko_Kore.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "73/832",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Gowun Dodum lacks Korean auxiliary/punctuation characters: ᄀ-ᄒ ᅡ-ᅵ ᆨ-ᇂ 丘 串 乃 久 乖 九 乞 乫 乾 (+747)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.weights",
+        "component": "type",
+        "severity": "warn",
+        "measured": 1,
+        "threshold": "regular (300-500) + bold (>= 600), or wght 400-700",
+        "message": "Gowun Dodum has < 2 usable weights (400); hierarchy will need faux bold",
+        "suggested_fix": "use it for display only, or pick a family with 400 and 600/700"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 13,
+        "threshold": null,
+        "message": "Gowun Dodum: ~13 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–B",
+          "B–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–B, B–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": []
+    }
+  },
+  "card": {
+    "ground": "brand-2"
+  },
+  "palette_build": {
+    "light_bg": "#ffc700",
+    "dark_bg": "#16171f"
+  }
+}

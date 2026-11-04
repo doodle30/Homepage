@@ -1,0 +1,36 @@
+---
+type Status = 'Out now' | 'Coming soon' | 'In development';
+interface Game { title?: string; body?: string; status?: Status; href?: string; image?: string; imageAlt?: string }
+interface Props { title?: string; empty?: string; items: Game[] }
+const { title = 'Games', empty, items } = Astro.props;
+// 이름 없는 게임은 카드를 만들지 않는다 (brief: games_note)
+const games = items.filter((g) => g.title && g.title.trim() && !/^untitled/i.test(g.title.trim()));
+---
+<section class="section" id="games">
+  <div class="container">
+    <h2>{title}</h2>
+    {games.length === 0 ? (
+      empty && <p class="empty">{empty}</p>
+    ) : (
+      <ul class="grid">
+        {games.map((g) => (
+          <li class="card">
+            {g.image && <img src={g.image} alt={g.imageAlt ?? ''} loading="lazy" />}
+            <div class="body">
+              {g.status && <span class="status">{g.status}</span>}
+              <h3>{g.href ? <a href={g.href}>{g.title}</a> : g.title}</h3>
+              {g.body && <p>{g.body}</p>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>
+<style>
+  .grid { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .card { border: 1px solid var(--bi-border); border-radius: 1rem; overflow: hidden; background: var(--bi-surface); }
+  .body { padding: 1.25rem 1.5rem 1.5rem; }
+  .status { display: inline-block; font-size: 0.8rem; font-weight: 600; padding: 0.2em 0.7em; border-radius: 999px; background: var(--bi-accent); color: var(--bi-on-accent); margin-bottom: 0.75rem; }
+  .card p, .empty { color: var(--bi-text-muted); margin: 0; }
+</style>

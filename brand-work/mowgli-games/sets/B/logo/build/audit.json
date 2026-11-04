@@ -1,0 +1,77 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "full-color: primary #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads); no brand colour is left in this version",
+      "suggested_fix": "fine for a one-colour mark; otherwise give a part a colour that reads on this ground, or declare logo.device tile",
+      "roles": [
+        "primary"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "on-light-background: primary #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "primary"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-16: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-32: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 1.91,
+      "threshold": null,
+      "message": "favicon-48: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.small-size",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.13,
+        "gap_px2": 0.76
+      },
+      "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+      "message": "symbol-small at 16 px: features narrower than 1 px (lost 0.13 px², clogged 0.76 px²)",
+      "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+    }
+  ]
+}

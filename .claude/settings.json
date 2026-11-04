@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --prefix site run dev)",
+      "Bash(npm --prefix site run build)",
+      "Bash(npm --prefix site run check)",
+      "Bash(npm --prefix site run verify)",
+      "Bash(node tools/check-site.mjs:*)"
+    ],
+    "deny": [
+      "Edit(vendor/**)",
+      "Write(vendor/**)"
+    ]
+  }
+}

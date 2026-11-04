@@ -1,0 +1,38 @@
+{
+  "name": "Mowgli Games",
+  "tagline": "Soft, round, and a little silly.",
+  "description": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+  "lang": "en",
+  "nav": [
+    { "label": "Games", "href": "/#games" },
+    { "label": "About", "href": "/about" },
+    { "label": "News", "href": "/news" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "hero": {
+    "title": "Soft, round, and a little silly.",
+    "body": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+    "cta": { "label": "See our games", "href": "/#games" }
+  },
+  "games": {
+    "title": "Games",
+    "empty": "Our first games are on the way. Join the Discord to hear about them first.",
+    "items": []
+  },
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "Mowgli Games is an independent studio from Korea. We make casual games that feel soft, round and a little silly: easy to start, fun to come back to, and made to fit into everyday life. Every game starts with a simple question: what would make someone smile for a moment?"
+    ]
+  },
+  "cta": {
+    "title": "Say hello, or come hang out on Discord.",
+    "button": { "label": "Contact", "href": "/contact" }
+  },
+  "contact": {
+    "email": "doodle3051@gmail.com",
+    "links": [
+      { "label": "Discord", "href": "https://discord.gg/jUQuEgjan" }
+    ]
+  }
+}

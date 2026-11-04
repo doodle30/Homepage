@@ -1,0 +1,10 @@
+/* brand/tokens/fonts.css 기준 (brand/fonts.md: Google Fonts, OFL-1.1). 폰트 이름은 이 파일에만 쓴다.
+   파일 로딩은 layouts/Base.astro 의 Google Fonts <link>. */
+:root {
+  --font-display: "Bagel Fat One", "IBM Plex Sans KR", system-ui, sans-serif;
+  --font-display-weight: 400;
+  --font-display-tracking: -0.010em;
+  --font-text: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-text-weight: 400;
+  --font-text-tracking: 0;
+}

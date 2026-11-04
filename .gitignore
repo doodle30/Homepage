@@ -1,0 +1,16 @@
+vendor/
+node_modules/
+site/dist/
+site/.astro/
+brand-work/**/render/
+*.log
+
+# brand-identity: caches and regenerable renders (sources = sets.json / identity.json / palette.json; final kit lives in brand/)
+brand-work/**/.cache/
+brand-work/**/kit/
+brand-work/**/logo/build/*.png
+brand-work/**/sets/*/card.png
+brand-work/**/sets/*/card.html
+brand-work/**/review.png
+brand-work/**/logo-sheet.png
+brand-work/**/board.html

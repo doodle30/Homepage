@@ -1,0 +1,8 @@
+:root {
+  --font-display: "Bagel Fat One", system-ui, sans-serif;
+  --font-display-weight: 400;
+  --font-display-tracking: -0.010em;
+  --font-text: "IBM Plex Sans KR", system-ui, sans-serif;
+  --font-text-weight: 400;
+  --font-text-tracking: 0.000em;
+}

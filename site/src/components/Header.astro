@@ -1,0 +1,26 @@
+---
+import site from '../data/site.json';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="header">
+  <div class="container bar">
+    <a href="/" class="brand" aria-label={`${site.name} home`}>
+      <img src="/logo.svg" alt={site.name} width="101" height="32" />
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        {site.nav.map((item) => (
+          <li><a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .header { border-bottom: 1px solid var(--bi-border); background: var(--bi-background); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; flex-wrap: wrap; }
+  .brand img { height: 2rem; width: auto; }
+  ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+  nav a { color: var(--bi-text); text-decoration: none; font-weight: 500; }
+  nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
+</style>

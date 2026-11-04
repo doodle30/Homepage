@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bounce O swatches</title>
+<style>
+  :root { --ink:#16181d; --muted:#5b6170; --line:#e3e5ea; --paper:#ffffff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font:14px/1.45 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
+  main { max-width:1180px; margin:0 auto; padding:48px 40px 64px; }
+  header { display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+    border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:32px; }
+  h1 { font-size:34px; letter-spacing:-0.02em; margin:0; }
+  h2 { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:40px 0 14px; }
+  header p { margin:6px 0 0; color:var(--muted); max-width:640px; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px; }
+  .muted { color:var(--muted); }
+  .audit { margin:0; font-size:13px; color:var(--muted); white-space:nowrap; }
+  .brands { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
+  .brand { margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; break-inside:avoid; }
+  .brand .chip { height:150px; padding:16px; display:flex; justify-content:space-between; align-items:flex-end;
+    font-weight:600; font-size:16px; }
+  .brand em { font-style:normal; font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.8; }
+  .ext-chip { display:grid; grid-template-columns:1fr 1fr; height:120px; }
+  .ext-half { padding:12px; display:flex; flex-direction:column; justify-content:space-between; font-size:12px; }
+  figcaption { display:flex; flex-direction:column; gap:3px; padding:14px 16px; font-size:12.5px; }
+  figcaption b { font-size:15px; }
+  .scale { display:grid; grid-template-columns:120px 1fr; gap:12px; align-items:stretch; margin-bottom:8px;
+    break-inside:avoid; }
+  .scale-name { font-weight:600; display:flex; flex-direction:column; justify-content:center; }
+  .scale-name small { font-weight:400; color:var(--muted); font-size:11px; }
+  .steps { display:grid; grid-template-columns:repeat(11,1fr); border-radius:10px; overflow:hidden; }
+  .step { min-height:64px; padding:8px 6px; display:flex; flex-direction:column; justify-content:space-between;
+    font-size:11px; }
+  .step b { font-size:12px; }
+  .step .mono { font-size:10px; }
+  .step.anchor { outline:3px solid var(--ink); outline-offset:-3px; }
+  .modes { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .mode { border:1px solid; border-radius:16px; padding:20px; break-inside:avoid; }
+  .mode-head { font-size:12px; letter-spacing:.12em; text-transform:uppercase; opacity:.7; margin-bottom:12px; }
+  .card { border:1px solid; border-radius:12px; padding:18px; }
+  .card h4 { margin:0 0 6px; font-size:18px; }
+  .card p { margin:0 0 14px; }
+  .card a { text-decoration:underline; }
+  .btns { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+  .btn { padding:9px 16px; border-radius:9px; font-weight:600; font-size:13px; border:1px solid transparent; }
+  .btn.ghost { background:transparent; }
+  .alt { border-radius:9px; padding:10px; display:flex; gap:8px; flex-wrap:wrap; }
+  .badge { border:1.5px solid; border-radius:999px; padding:2px 10px; font-size:12px; font-weight:600; }
+  .pairs { width:100%; border-collapse:collapse; margin-top:14px; font-size:12px; }
+  .pairs td { padding:4px 0; border-top:1px solid rgba(127,127,127,.25); }
+  .pairs td:nth-child(2) { text-align:right; padding-right:12px; }
+  .pairs td:last-child { text-align:right; width:70px; }
+  .ok { opacity:.75; }
+  .bad { color:#c4001a; font-weight:700; background:#fff; border-radius:4px; }
+  @media (max-width:760px) { main { padding:28px 16px; } .modes { grid-template-columns:1fr; }
+    .scale { grid-template-columns:1fr; } .step .mono { display:none; } header { flex-direction:column;
+    align-items:flex-start; } }
+  @media print { main { padding:0; } body { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+</style></head>
+<body><main>
+<header><div><h1>Bounce O</h1><p>Warm cocoa dark with one yolk yellow.</p></div><p class=audit>Audit: <b>pass</b> · 0 blocking · 1 warning · 4 notes</p></header>
+<h2>Brand colours</h2>
+<section class="brands">
+<figure class="brand">
+  <div class="chip" style="background:#ffaa0a;color:#111111"><span>Yolk</span>
+    <em>locked</em></div>
+  <figcaption><b class=mono>#ffaa0a</b><span class=mono>rgb(255 170 10)</span><span class=mono>oklch(80.2% 0.169 73.0)</span>
+    <span class=mono>Lab D50 76.7 / 25.1 / 78.7</span>
+    <span>on white 1.91:1 · on black 11.01:1</span><span class=muted>the mark&#x27;s yellow part, buttons</span>
+  </figcaption>
+</figure>
+<figure class="brand">
+  <div class="chip" style="background:#694509;color:#ffffff"><span>Accent</span>
+    </div>
+  <figcaption><b class=mono>#694509</b><span class=mono>rgb(105 69 9)</span><span class=mono>oklch(42.1% 0.085 73.3)</span>
+    <span class=mono>Lab D50 32.8 / 12.3 / 38.6</span>
+    <span>on white 8.55:1 · on black 2.46:1</span><span class=muted>calls to action, highlights</span>
+  </figcaption>
+</figure>
+<figure class="brand">
+  <div class="chip" style="background:#2a1d17;color:#ffffff"><span>Cocoa</span>
+    <em>locked</em></div>
+  <figcaption><b class=mono>#2a1d17</b><span class=mono>rgb(42 29 23)</span><span class=mono>oklch(24.5% 0.023 45.9)</span>
+    <span class=mono>Lab D50 12.3 / 5.8 / 6.8</span>
+    <span>on white 16.32:1 · on black 1.29:1</span><span class=muted>grounds and dark surfaces</span>
+  </figcaption>
+</figure></section>
+<p class=muted>Feels: sweet, squishy, cheerful</p>
+
+<h2>Scales</h2>
+<section><div class=scale><div class=scale-name>primary<small>anchor 300</small></div><div class=steps><div class='step' style='background:#fff6eb;color:#111111'><b>50</b><span class=mono>#fff6eb</span></div><div class='step' style='background:#ffe9ce;color:#111111'><b>100</b><span class=mono>#ffe9ce</span></div><div class='step' style='background:#fed195;color:#111111'><b>200</b><span class=mono>#fed195</span></div><div class='step anchor' style='background:#ffaa0a;color:#111111'><b>300</b><span class=mono>#ffaa0a</span></div><div class='step' style='background:#de9210;color:#111111'><b>400</b><span class=mono>#de9210</span></div><div class='step' style='background:#c7820d;color:#111111'><b>500</b><span class=mono>#c7820d</span></div><div class='step' style='background:#a66909;color:#ffffff'><b>600</b><span class=mono>#a66909</span></div><div class='step' style='background:#8a5606;color:#ffffff'><b>700</b><span class=mono>#8a5606</span></div><div class='step' style='background:#744604;color:#ffffff'><b>800</b><span class=mono>#744604</span></div><div class='step' style='background:#623a03;color:#ffffff'><b>900</b><span class=mono>#623a03</span></div><div class='step' style='background:#3d2101;color:#ffffff'><b>950</b><span class=mono>#3d2101</span></div></div></div><div class=scale><div class=scale-name>neutral<small>tinted toward #2a1d17</small></div><div class=steps><div class='step' style='background:#fcfaf9;color:#111111'><b>50</b><span class=mono>#fcfaf9</span></div><div class='step' style='background:#f5f2f1;color:#111111'><b>100</b><span class=mono>#f5f2f1</span></div><div class='step' style='background:#e9e5e3;color:#111111'><b>200</b><span class=mono>#e9e5e3</span></div><div class='step' style='background:#d8d3d0;color:#111111'><b>300</b><span class=mono>#d8d3d0</span></div><div class='step' style='background:#a99f9b;color:#111111'><b>400</b><span class=mono>#a99f9b</span></div><div class='step' style='background:#7c706b;color:#ffffff'><b>500</b><span class=mono>#7c706b</span></div><div class='step' style='background:#5f524c;color:#ffffff'><b>600</b><span class=mono>#5f524c</span></div><div class='step' style='background:#4b3e37;color:#ffffff'><b>700</b><span class=mono>#4b3e37</span></div><div class='step' style='background:#342823;color:#ffffff'><b>800</b><span class=mono>#342823</span></div><div class='step' style='background:#251913;color:#ffffff'><b>900</b><span class=mono>#251913</span></div><div class='step' style='background:#160d09;color:#ffffff'><b>950</b><span class=mono>#160d09</span></div></div></div><div class=scale><div class=scale-name>accent<small>anchor 900</small></div><div class=steps><div class='step' style='background:#fdf6ee;color:#111111'><b>50</b><span class=mono>#fdf6ee</span></div><div class='step' style='background:#f8eee0;color:#111111'><b>100</b><span class=mono>#f8eee0</span></div><div class='step' style='background:#f3dcbe;color:#111111'><b>200</b><span class=mono>#f3dcbe</span></div><div class='step' style='background:#eec286;color:#111111'><b>300</b><span class=mono>#eec286</span></div><div class='step' style='background:#d5a767;color:#111111'><b>400</b><span class=mono>#d5a767</span></div><div class='step' style='background:#c29455;color:#111111'><b>500</b><span class=mono>#c29455</span></div><div class='step' style='background:#a6793a;color:#111111'><b>600</b><span class=mono>#a6793a</span></div><div class='step' style='background:#8f6321;color:#ffffff'><b>700</b><span class=mono>#8f6321</span></div><div class='step' style='background:#7a520f;color:#ffffff'><b>800</b><span class=mono>#7a520f</span></div><div class='step anchor' style='background:#694509;color:#ffffff'><b>900</b><span class=mono>#694509</span></div><div class='step' style='background:#342516;color:#ffffff'><b>950</b><span class=mono>#342516</span></div></div></div><div class=scale><div class=scale-name>success<small></small></div><div class=steps><div class='step' style='background:#ecfcf5;color:#111111'><b>50</b><span class=mono>#ecfcf5</span></div><div class='step' style='background:#d6f8eb;color:#111111'><b>100</b><span class=mono>#d6f8eb</span></div><div class='step' style='background:#98f4d5;color:#111111'><b>200</b><span class=mono>#98f4d5</span></div><div class='step' style='background:#66e2bc;color:#111111'><b>300</b><span class=mono>#66e2bc</span></div><div class='step' style='background:#3fc6a0;color:#111111'><b>400</b><span class=mono>#3fc6a0</span></div><div class='step' style='background:#2bb28e;color:#111111'><b>500</b><span class=mono>#2bb28e</span></div><div class='step' style='background:#0d9373;color:#111111'><b>600</b><span class=mono>#0d9373</span></div><div class='step' style='background:#08795e;color:#ffffff'><b>700</b><span class=mono>#08795e</span></div><div class='step' style='background:#06644d;color:#ffffff'><b>800</b><span class=mono>#06644d</span></div><div class='step' style='background:#045440;color:#ffffff'><b>900</b><span class=mono>#045440</span></div><div class='step' style='background:#073025;color:#ffffff'><b>950</b><span class=mono>#073025</span></div></div></div><div class=scale><div class=scale-name>warning<small></small></div><div class=steps><div class='step' style='background:#fff5f0;color:#111111'><b>50</b><span class=mono>#fff5f0</span></div><div class='step' style='background:#ffeade;color:#111111'><b>100</b><span class=mono>#ffeade</span></div><div class='step' style='background:#fed5bb;color:#111111'><b>200</b><span class=mono>#fed5bb</span></div><div class='step' style='background:#feb687;color:#111111'><b>300</b><span class=mono>#feb687</span></div><div class='step' style='background:#f68f44;color:#111111'><b>400</b><span class=mono>#f68f44</span></div><div class='step' style='background:#e37a25;color:#111111'><b>500</b><span class=mono>#e37a25</span></div><div class='step' style='background:#be6109;color:#111111'><b>600</b><span class=mono>#be6109</span></div><div class='step' style='background:#9d4f06;color:#ffffff'><b>700</b><span class=mono>#9d4f06</span></div><div class='step' style='background:#824004;color:#ffffff'><b>800</b><span class=mono>#824004</span></div><div class='step' style='background:#6e3503;color:#ffffff'><b>900</b><span class=mono>#6e3503</span></div><div class='step' style='background:#401e05;color:#ffffff'><b>950</b><span class=mono>#401e05</span></div></div></div><div class=scale><div class=scale-name>danger<small></small></div><div class=steps><div class='step' style='background:#fff5f3;color:#111111'><b>50</b><span class=mono>#fff5f3</span></div><div class='step' style='background:#ffe9e6;color:#111111'><b>100</b><span class=mono>#ffe9e6</span></div><div class='step' style='background:#fed3cd;color:#111111'><b>200</b><span class=mono>#fed3cd</span></div><div class='step' style='background:#feb2a8;color:#111111'><b>300</b><span class=mono>#feb2a8</span></div><div class='step' style='background:#fe8477;color:#111111'><b>400</b><span class=mono>#fe8477</span></div><div class='step' style='background:#f86156;color:#111111'><b>500</b><span class=mono>#f86156</span></div><div class='step' style='background:#e0312e;color:#ffffff'><b>600</b><span class=mono>#e0312e</span></div><div class='step' style='background:#b4312b;color:#ffffff'><b>700</b><span class=mono>#b4312b</span></div><div class='step' style='background:#922c27;color:#ffffff'><b>800</b><span class=mono>#922c27</span></div><div class='step' style='background:#7a2520;color:#ffffff'><b>900</b><span class=mono>#7a2520</span></div><div class='step' style='background:#471713;color:#ffffff'><b>950</b><span class=mono>#471713</span></div></div></div><div class=scale><div class=scale-name>info<small></small></div><div class=steps><div class='step' style='background:#f2f8ff;color:#111111'><b>50</b><span class=mono>#f2f8ff</span></div><div class='step' style='background:#e3f0ff;color:#111111'><b>100</b><span class=mono>#e3f0ff</span></div><div class='step' style='background:#c7e2fe;color:#111111'><b>200</b><span class=mono>#c7e2fe</span></div><div class='step' style='background:#9ecdfe;color:#111111'><b>300</b><span class=mono>#9ecdfe</span></div><div class='step' style='background:#66b2fd;color:#111111'><b>400</b><span class=mono>#66b2fd</span></div><div class='step' style='background:#3e9ef7;color:#111111'><b>500</b><span class=mono>#3e9ef7</span></div><div class='step' style='background:#2681d2;color:#111111'><b>600</b><span class=mono>#2681d2</span></div><div class='step' style='background:#196aaf;color:#ffffff'><b>700</b><span class=mono>#196aaf</span></div><div class='step' style='background:#125792;color:#ffffff'><b>800</b><span class=mono>#125792</span></div><div class='step' style='background:#0f487a;color:#ffffff'><b>900</b><span class=mono>#0f487a</span></div><div class='step' style='background:#0c2a46;color:#ffffff'><b>950</b><span class=mono>#0c2a46</span></div></div></div></section>
+<h2>Roles in use</h2>
+<section class="modes">
+<div class="mode" style="background:#ffffff;color:#251913;border-color:#e9e5e3">
+  <div class="mode-head"><span>light</span></div>
+  <div class="card" style="background:#fcfaf9;border-color:#e9e5e3">
+    <h4 style="color:#251913">Heading on surface</h4>
+    <p style="color:#5f524c">Muted supporting copy with a <a style="color:#8f6321">text link</a>.</p>
+    <div class="btns">
+      <span class="btn" style="background:#ffaa0a;color:#160d09">Primary</span>
+      <span class="btn" style="background:#694509;color:#ffffff">Accent</span>
+      <span class="btn ghost" style="color:#251913;border-color:#e9e5e3;
+        box-shadow:0 0 0 2px #ffffff,0 0 0 4px #c7820d">Focused</span>
+    </div>
+    <div class="alt" style="background:#f5f2f1"><span class=badge style='color:#08795e;border-color:#08795e'>Success</span><span class=badge style='color:#9d4f06;border-color:#9d4f06'>Warning</span><span class=badge style='color:#b4312b;border-color:#b4312b'>Danger</span><span class=badge style='color:#196aaf;border-color:#196aaf'>Info</span></div>
+  </div>
+  <table class="pairs" style="color:#251913"><tr><td>Ink / Ground</td><td class=mono>17.11:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Muted ink / Ground</td><td class=mono>7.51:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Ink / Surface</td><td class=mono>16.45:1</td><td class='ok'>pass 4.5</td></tr><tr><td>On primary / Primary</td><td class=mono>10.05:1</td><td class='ok'>pass 4.5</td></tr><tr><td>On accent / Accent</td><td class=mono>8.55:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Link / Ground</td><td class=mono>5.28:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Focus / Ground</td><td class=mono>3.17:1</td><td class='ok'>pass 3.0</td></tr><tr><td>Danger / Ground</td><td class=mono>6.15:1</td><td class='ok'>pass 3.0</td></tr><tr><td>Success / Ground</td><td class=mono>5.38:1</td><td class='ok'>pass 3.0</td></tr></table>
+</div>
+<div class="mode" style="background:#2a1d17;color:#f5f2f1;border-color:#5f524c">
+  <div class="mode-head"><span>dark</span></div>
+  <div class="card" style="background:#342823;border-color:#5f524c">
+    <h4 style="color:#f5f2f1">Heading on surface</h4>
+    <p style="color:#d8d3d0">Muted supporting copy with a <a style="color:#ffaa0a">text link</a>.</p>
+    <div class="btns">
+      <span class="btn" style="background:#ffaa0a;color:#160d09">Primary</span>
+      <span class="btn" style="background:#c29455;color:#160d09">Accent</span>
+      <span class="btn ghost" style="color:#f5f2f1;border-color:#5f524c;
+        box-shadow:0 0 0 2px #2a1d17,0 0 0 4px #ffaa0a">Focused</span>
+    </div>
+    <div class="alt" style="background:#4b3e37"><span class=badge style='color:#3fc6a0;border-color:#3fc6a0'>Success</span><span class=badge style='color:#f68f44;border-color:#f68f44'>Warning</span><span class=badge style='color:#fe8477;border-color:#fe8477'>Danger</span><span class=badge style='color:#66b2fd;border-color:#66b2fd'>Info</span></div>
+  </div>
+  <table class="pairs" style="color:#f5f2f1"><tr><td>Ink / Ground</td><td class=mono>14.65:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Muted ink / Ground</td><td class=mono>11.00:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Ink / Surface</td><td class=mono>12.79:1</td><td class='ok'>pass 4.5</td></tr><tr><td>On primary / Primary</td><td class=mono>10.05:1</td><td class='ok'>pass 4.5</td></tr><tr><td>On accent / Accent</td><td class=mono>6.99:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Link / Ground</td><td class=mono>8.55:1</td><td class='ok'>pass 4.5</td></tr><tr><td>Focus / Ground</td><td class=mono>8.55:1</td><td class='ok'>pass 3.0</td></tr><tr><td>Danger / Ground</td><td class=mono>6.83:1</td><td class='ok'>pass 3.0</td></tr><tr><td>Success / Ground</td><td class=mono>7.61:1</td><td class='ok'>pass 3.0</td></tr></table>
+</div></section>
+<p class="muted" style="margin-top:32px;font-size:12px">Contrast: WCAG 2.x ratios, unrounded. Lab D50 values are computed from sRGB for print hand-off; CMYK needs the printer&#x27;s ICC profile and Pantone matches need a physical guide. Generated by brand-identity from palette.json. Edit the palette, not this file.</p>
+</main></body></html>

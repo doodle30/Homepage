@@ -1,0 +1,25 @@
+{
+  "display": {
+    "family": "Asta Sans",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\instances\\AstaSans-678bbcd5df2be809.ttf",
+    "location": {
+      "wght": 800
+    },
+    "weights": [
+      800
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Asta Sans",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\instances\\AstaSans-f6e1c8d791380a66.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      700
+    ],
+    "features": []
+  }
+}

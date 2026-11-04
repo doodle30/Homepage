@@ -1,0 +1,16 @@
+---
+interface Props { title: string; body: string; cta?: { label: string; href: string } }
+const { title, body, cta } = Astro.props;
+---
+<section class="hero section">
+  <div class="container">
+    <h1>{title}</h1>
+    <p class="lead">{body}</p>
+    {cta && <a class="btn" href={cta.href}>{cta.label}</a>}
+  </div>
+</section>
+<style>
+  .hero { background: var(--bi-surface); }
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); max-width: 18em; }
+  .lead { font-size: 1.15rem; color: var(--bi-text-muted); max-width: 36em; margin-bottom: 2rem; }
+</style>

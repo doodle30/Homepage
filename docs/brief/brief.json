@@ -1,0 +1,40 @@
+{
+  "name": "Mowgli Games",
+  "name_local": { "ko": "모글리 게임즈" },
+  "slug": "mowgli-games",
+  "state": { "logo": "new", "type": "new", "palette": "new" },
+  "sources": { "logo": "", "type": "", "palette": "" },
+  "sets": 3,
+  "langs": ["en", "ko"],
+  "numbers": false,
+  "site": "",
+  "work": "brand-work/logo-round2/mowgli-games",
+  "chosen": { "set": "B", "name": "Bounce O", "date": "2026-11-05", "note": "type+palette from round-1 set B (Bagel Letters), logo from round 2" },
+  "sector": "Independent casual game studio (one-person)",
+  "audience": "Players worldwide",
+  "attributes": ["casual", "warm", "creative"],
+  "competitors": [],
+  "likes": "Dark imagery / dark grounds with a deep, saturated yellow key colour",
+  "tagline": "Soft, round, and a little silly.",
+  "sentence": {
+    "en": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+    "ko": "모글리 게임즈는 누구나 쉽게 시작하고 즐길 수 있는, 말랑하고 장난스러운 캐주얼 게임을 만드는 인디 스튜디오입니다."
+  },
+  "nav": ["Games", "About", "News", "Contact"],
+  "cta": "See our games",
+  "games": [],
+  "games_note": "Mix released and in-development games with a status label (Out now | Coming soon | In development). Never show a card for an unnamed game.",
+  "about": [
+    "Mowgli Games is an independent studio from Korea. We make casual games that feel soft, round and a little silly: easy to start, fun to come back to, and made to fit into everyday life. Every game starts with a simple question: what would make someone smile for a moment?"
+  ],
+  "contact": {
+    "email": "doodle3051@gmail.com",
+    "links": [{ "label": "Discord", "href": "https://discord.gg/jUQuEgjan" }]
+  },
+  "business": { "show": false },
+  "ops": { "domain": "", "hosting": "", "owner": "" },
+  "defaults_used": [
+    "sentence.ko: Claude 번역안 — 사용자 확인 필요",
+    "competitors 없음: 세트끼리 서로 다른 방향으로 차별화"
+  ]
+}

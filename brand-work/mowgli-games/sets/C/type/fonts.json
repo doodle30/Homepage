@@ -1,0 +1,24 @@
+{
+  "display": {
+    "family": "Dongle",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\dongle\\Dongle-Bold.ttf",
+    "location": {
+      "wght": 700
+    },
+    "weights": [
+      700
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Gowun Dodum",
+    "file": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\gowundodum\\GowunDodum-Regular.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400
+    ],
+    "features": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "brand-identity/brief@1",
+  "brand": "Mowgli Games",
+  "tagline": "Soft, round, and a little silly.",
+  "site": null,
+  "languages": [
+    "en",
+    "ko"
+  ],
+  "doc_lang": "en",
+  "numbers": false,
+  "components": {
+    "logo": "new",
+    "type": "new",
+    "palette": "new"
+  },
+  "sources": {},
+  "sets": 4,
+  "sector": "Independent casual game studio (one-person)",
+  "audience": "Players worldwide",
+  "attributes": [
+    "casual",
+    "warm",
+    "creative"
+  ],
+  "competitors": [],
+  "axes": [],
+  "copy": {
+    "sentence": {
+      "en": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+      "ko": "모글리 게임즈는 누구나 쉽게 시작하고 즐길 수 있는, 말랑하고 장난스러운 캐주얼 게임을 만드는 인디 스튜디오입니다."
+    },
+    "nav": [
+      "Games",
+      "About",
+      "News",
+      "Contact"
+    ],
+    "cta": "See our games"
+  }
+}

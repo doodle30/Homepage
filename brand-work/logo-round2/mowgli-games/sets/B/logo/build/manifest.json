@@ -1,0 +1,525 @@
+{
+  "schema": "brand-identity/logo-build@1",
+  "set": "B",
+  "type": "wordmark",
+  "font": {
+    "path": "C:\\Users\\doodl\\.cache\\brand-identity\\fonts\\google\\ofl\\bagelfatone\\BagelFatOne-Regular.ttf",
+    "role": "display",
+    "location": {
+      "wght": 400
+    },
+    "license": "OFL-1.1",
+    "family": "Bagel Fat One"
+  },
+  "masters": {
+    "symbol-small": "master-symbol-small.svg",
+    "wordmark": "master-wordmark.svg",
+    "primary": "master-primary.svg"
+  },
+  "versions": {
+    "full-color": {
+      "svg": "full-color.svg",
+      "png": "full-color.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark"
+          ],
+          "hex": "#251913",
+          "area": 20782.8
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "wordmark-detail-ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 3422.13
+        }
+      ]
+    },
+    "full-color-dark": {
+      "svg": "full-color-dark.svg",
+      "png": "full-color-dark.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark"
+          ],
+          "hex": "#f5f2f1",
+          "area": 20782.8
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "wordmark-detail-ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 3422.13
+        }
+      ]
+    },
+    "one-color-dark": {
+      "svg": "one-color-dark.svg",
+      "png": "one-color-dark.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark",
+            "wordmark-detail-ball"
+          ],
+          "hex": "#251913",
+          "area": 24204.93
+        }
+      ]
+    },
+    "one-color-light": {
+      "svg": "one-color-light.svg",
+      "png": "one-color-light.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark",
+            "wordmark-detail-ball"
+          ],
+          "hex": "#f5f2f1",
+          "area": 24204.93
+        }
+      ]
+    },
+    "on-light-background": {
+      "svg": "on-light-background.svg",
+      "png": "on-light-background.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "light",
+      "ground": "#ffffff",
+      "ground_role": "background",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark"
+          ],
+          "hex": "#251913",
+          "area": 20782.8
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "wordmark-detail-ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 3422.13
+        }
+      ]
+    },
+    "on-dark-background": {
+      "svg": "on-dark-background.svg",
+      "png": "on-dark-background.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark"
+          ],
+          "hex": "#f5f2f1",
+          "area": 20782.8
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "wordmark-detail-ball"
+          ],
+          "hex": "#ffaa0a",
+          "area": 3422.13
+        }
+      ]
+    },
+    "on-light-primary": {
+      "svg": "on-light-primary.svg",
+      "png": "on-light-primary.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "light",
+      "ground": "#ffaa0a",
+      "ground_role": "primary",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark",
+            "wordmark-detail-ball"
+          ],
+          "hex": "#160d09",
+          "area": 24204.93
+        }
+      ]
+    },
+    "on-light-accent": {
+      "svg": "on-light-accent.svg",
+      "png": "on-light-accent.png",
+      "size": [
+        1024,
+        550
+      ],
+      "mode": "light",
+      "ground": "#694509",
+      "ground_role": "accent",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "text",
+          "ids": [
+            "wordmark",
+            "wordmark-detail-ball"
+          ],
+          "hex": "#ffffff",
+          "area": 24204.93
+        }
+      ]
+    },
+    "favicon-16": {
+      "svg": "favicon-16.svg",
+      "png": "favicon-16.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile"
+          ],
+          "hex": "#2a1d17",
+          "area": 7093.29
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball",
+            "shadow"
+          ],
+          "hex": "#ffaa0a",
+          "area": 2327.0
+        }
+      ]
+    },
+    "favicon-32": {
+      "svg": "favicon-32.svg",
+      "png": "favicon-32.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile"
+          ],
+          "hex": "#2a1d17",
+          "area": 7093.29
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball",
+            "shadow"
+          ],
+          "hex": "#ffaa0a",
+          "area": 2327.0
+        }
+      ]
+    },
+    "favicon-48": {
+      "svg": "favicon-48.svg",
+      "png": "favicon-48.png",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile"
+          ],
+          "hex": "#2a1d17",
+          "area": 7093.29
+        },
+        {
+          "role": "brand-2",
+          "ids": [
+            "ball",
+            "shadow"
+          ],
+          "hex": "#ffaa0a",
+          "area": 2327.0
+        }
+      ]
+    },
+    "small-16-one-color-dark": {
+      "svg": "small-16-one-color-dark.svg",
+      "png": "small-16-one-color-dark.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile",
+            "ball",
+            "shadow"
+          ],
+          "hex": "#251913",
+          "area": 9420.29
+        }
+      ]
+    },
+    "small-16-one-color-light": {
+      "svg": "small-16-one-color-light.svg",
+      "png": "small-16-one-color-light.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile",
+            "ball",
+            "shadow"
+          ],
+          "hex": "#f5f2f1",
+          "area": 8941.22
+        }
+      ]
+    },
+    "small-32-one-color-dark": {
+      "svg": "small-32-one-color-dark.svg",
+      "png": "small-32-one-color-dark.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile",
+            "ball",
+            "shadow"
+          ],
+          "hex": "#251913",
+          "area": 9420.29
+        }
+      ]
+    },
+    "small-32-one-color-light": {
+      "svg": "small-32-one-color-light.svg",
+      "png": "small-32-one-color-light.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "dark",
+      "ground": "#2a1d17",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile",
+            "ball",
+            "shadow"
+          ],
+          "hex": "#f5f2f1",
+          "area": 8941.22
+        }
+      ]
+    },
+    "app-icon-512": {
+      "svg": "app-icon-512.svg",
+      "png": "app-icon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "light",
+      "ground": "#ffaa0a",
+      "ground_role": "primary",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "brand-1",
+          "ids": [
+            "tile",
+            "ball",
+            "shadow"
+          ],
+          "hex": "#160d09",
+          "area": 9420.29
+        }
+      ]
+    }
+  },
+  "small": {},
+  "sources": {
+    "wordmark_detail": {
+      "sha256": "1e9e679bbb98a78b9526867c614b85bea1534666a4cfa75b111d4d6698913b40"
+    },
+    "symbol_small": {
+      "sha256": "ca6973b95872237f9175e7aa47101c7239776e3a7097cdd2895017f0a5fbf56b"
+    }
+  },
+  "optics": {
+    "cap_height": 734.0,
+    "x_height": 527.0,
+    "upm": 1000,
+    "overshoot_top": 0.0,
+    "overshoot_bottom": 0.0041,
+    "x_overshoot_top": 0.0,
+    "stem": 28.747,
+    "crossbar": 20.027,
+    "crossbar_stem_ratio": 0.697
+  },
+  "glyphs": {
+    "wordmark": "wordmark-glyphs.json"
+  },
+  "primary": "wordmark",
+  "anchors": {
+    "symbol-small": 29
+  },
+  "clear_space": {
+    "unit": "cap-height",
+    "multiple": 1.0,
+    "units": 100.0
+  },
+  "grounds": [
+    {
+      "mode": "light",
+      "ground": "background",
+      "on": "full colour"
+    },
+    {
+      "mode": "dark",
+      "ground": "background",
+      "on": "full colour"
+    },
+    {
+      "mode": "light",
+      "ground": "primary",
+      "on": "onPrimary"
+    },
+    {
+      "mode": "light",
+      "ground": "accent",
+      "on": "onAccent"
+    }
+  ],
+  "icon_from": "symbol-small.svg",
+  "favicon_source": "symbol-small.svg",
+  "app_icon": {
+    "tile": "primary",
+    "mark": "onPrimary",
+    "content": 0.58,
+    "optical_lift": 0.015,
+    "source": "default"
+  }
+}

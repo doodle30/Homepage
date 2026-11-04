@@ -1,0 +1,14 @@
+{
+  "name": "company-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "node ../tools/check-site.mjs dist src",
+    "verify": "astro build && node ../tools/check-site.mjs dist src"
+  },
+  "dependencies": {
+    "astro": "^7.4.5"
+  }
+}

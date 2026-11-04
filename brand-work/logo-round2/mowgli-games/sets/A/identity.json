@@ -1,0 +1,466 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Mowgli Games",
+    "tagline": "Soft, round, and a little silly.",
+    "languages": [
+      "en",
+      "ko"
+    ],
+    "doc_lang": "en",
+    "sector": "Independent casual game studio (one-person)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+        "ko": "모글리 게임즈는 누구나 쉽게 시작하고 즐길 수 있는, 말랑하고 장난스러운 캐주얼 게임을 만드는 인디 스튜디오입니다."
+      },
+      "nav": [
+        "Games",
+        "About",
+        "News",
+        "Contact"
+      ],
+      "cta": "See our games"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Peekaboo",
+    "recommended": true,
+    "mechanism": "A puffy m is a little hill, and two eyes peek over the top of it: the brand's letter becomes a character that is always about to play hide-and-seek.",
+    "expression_move": "The eyes; the wordmark beside them is plain cocoa or cream.",
+    "differs_by": "Turns the initial into a character instead of a tile or a mascot drawing."
+  },
+  "axes": {
+    "playful_serious": -2,
+    "quiet_loud": 0,
+    "warm_cool": -2,
+    "friend_authority": -1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Bagel Fat One",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {},
+      "features": [],
+      "case": "lower",
+      "tracking": -10,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "IBM Plex Sans KR",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {},
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "A puffy yolk 'm' with two round eyes peeking over its humps.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "mowgli",
+      "role": "display",
+      "location": null,
+      "tracking": -10,
+      "case": "lower"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "m": "brand-2",
+      "eyes": "text",
+      "wordmark": "text"
+    },
+    "tags": [
+      "letterform"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "gold-brass-accent",
+      "why": "The user asked for a deep yellow key colour on dark (questionnaire A11) and picked set B's yolk; the flagged tone is that same yellow, not a gold accent added for warmth."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "Type and palette are set B as picked by the user; only the logo is explored here.",
+      "evidence": "measured",
+      "source": "user choice 2026-11-05"
+    },
+    {
+      "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+      "evidence": "measured",
+      "source": "docs/brief/questionnaire.md A11"
+    },
+    {
+      "claim": "The symbol is built from the display face's own 'm', so mark and wordmark share one shape language.",
+      "evidence": "practice",
+      "source": "logo.md, lockups"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "4b9892395739a2d266a5b60023459da13dbc9a2ef79c82d22c1a9ca64633cd3b"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 7,
+      "info": 16
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.91,
+        "threshold": 3.0,
+        "message": "light: primary #ffaa0a on background #ffffff is 1.91:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#ffaa0a",
+          "to": "#c7820d",
+          "how": "use primary-500 (same scale)",
+          "ratio_after": 3.17
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.25,
+        "threshold": 3.0,
+        "message": "light: border #e9e5e3 on background #ffffff is 1.25:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#e9e5e3",
+          "to": "#7c706b",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.79
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.71,
+        "threshold": 3.0,
+        "message": "dark: link #ffaa0a on text #f5f2f1 is 1.71:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#ffaa0a",
+          "to": "#a66909",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 4.06
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.17,
+        "threshold": 3.0,
+        "message": "dark: border #5f524c on background #2a1d17 is 2.17:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#5f524c",
+          "to": "#7c706b",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.41
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#ffaa0a sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "81/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Bagel Fat One lacks English auxiliary/punctuation characters: Ă Ā Ĕ Ē Ĭ Ī Ŏ Ō Ŭ Ū ă ā (+9)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.coverage.ko_Kore.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "54/832",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Bagel Fat One lacks Korean auxiliary/punctuation characters: ᄀ-ᄒ ᅡ-ᅵ ᆨ-ᇂ 丘 串 乃 久 乖 九 乞 乫 乾 (+766)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "221/319",
+        "threshold": "GF Latin Core",
+        "message": "Bagel Fat One misses 98/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 21,
+        "threshold": null,
+        "message": "Bagel Fat One: ~21 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "25/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "IBM Plex Sans KR lacks English auxiliary/punctuation characters: Á À Ă Â Å Ä Ã Ā Æ Ç É È (+65)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.ko_Kore.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "71/832",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "IBM Plex Sans KR lacks Korean auxiliary/punctuation characters: ᄀ-ᄒ ᅡ-ᅵ ᆨ-ᇂ 丘 串 乃 久 乖 九 乞 乫 乾 (+749)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "125/319",
+        "threshold": "GF Latin Core",
+        "message": "IBM Plex Sans KR misses 194/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 21,
+        "threshold": null,
+        "message": "IBM Plex Sans KR: ~21 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.91,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: brand-2 #ffaa0a on #ffffff is 1.91:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.91,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: brand-2 #ffaa0a on #ffffff is 1.91:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.91,
+        "threshold": null,
+        "message": "symbol-only: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.91,
+        "threshold": null,
+        "message": "favicon-16: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.91,
+        "threshold": null,
+        "message": "favicon-32: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.91,
+        "threshold": null,
+        "message": "favicon-48: brand-2 #ffaa0a is 1.91:1 on #ffffff; drawn in the light text colour #251913 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.thin-feature",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 1.58,
+          "gap_px2": 5.78
+        },
+        "threshold": ">= 1 px = 5.0 units (heuristic, uncalibrated)",
+        "message": "symbol at 20 px (min size): strokes/gaps thinner than 1 px (lost 1.58 px², clogged 5.78 px²)",
+        "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+      },
+      {
+        "id": "logo.small-size",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 1.66,
+          "gap_px2": 4.43
+        },
+        "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+        "message": "symbol at 16 px: features narrower than 1 px (lost 1.66 px², clogged 4.43 px²)",
+        "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–B",
+          "A–C",
+          "A–D",
+          "B–C",
+          "B–D"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–B, A–C, A–D, B–C, B–D differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "card": {
+    "ground": "dark"
+  },
+  "palette_build": {
+    "dark_bg": "#2a1d17",
+    "strategy": "mono"
+  }
+}

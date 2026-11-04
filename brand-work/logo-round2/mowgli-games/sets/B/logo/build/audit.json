@@ -1,0 +1,29 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "full-color: brand-2 #ffaa0a on #ffffff is 1.91:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "brand-2"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 1.91,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "on-light-background: brand-2 #ffaa0a on #ffffff is 1.91:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "brand-2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+@import "./tokens.css";
+@import "./fonts.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: dark; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bi-background);
+  color: var(--bi-text);
+  font-family: var(--font-text);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+/* Bagel Fat One은 큰 제목에만 (brand/brand.md). 작은 제목은 본문 서체 600. */
+h1, h2 {
+  font-family: var(--font-display); font-weight: var(--font-display-weight);
+  letter-spacing: var(--font-display-tracking); line-height: 1.15; margin: 0 0 0.5em;
+}
+h3 { font-family: var(--font-text); font-weight: 600; line-height: 1.35; margin: 0 0 0.5em; }
+p { margin: 0 0 1em; }
+a { color: var(--bi-link); text-underline-offset: 0.2em; }
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 3px solid var(--bi-focus); outline-offset: 3px; }
+.container { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+.section { padding-block: clamp(3rem, 8vw, 6rem); }
+.btn {
+  display: inline-block; padding: 0.8em 1.6em; border-radius: 999px;
+  background: var(--bi-primary); color: var(--bi-on-primary);
+  text-decoration: none; font-weight: 600;
+}
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 1rem; top: 1rem; background: var(--bi-surface); padding: 0.5rem 1rem; z-index: 10; }

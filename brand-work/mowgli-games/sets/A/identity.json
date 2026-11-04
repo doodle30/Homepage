@@ -1,0 +1,420 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Mowgli Games",
+    "tagline": "Soft, round, and a little silly.",
+    "languages": [
+      "en",
+      "ko"
+    ],
+    "doc_lang": "en",
+    "sector": "Independent casual game studio (one-person)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
+        "ko": "모글리 게임즈는 누구나 쉽게 시작하고 즐길 수 있는, 말랑하고 장난스러운 캐주얼 게임을 만드는 인디 스튜디오입니다."
+      },
+      "nav": [
+        "Games",
+        "About",
+        "News",
+        "Contact"
+      ],
+      "cta": "See our games"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Night Peek",
+    "recommended": true,
+    "mechanism": "Something friendly is peeking at you from the dark: two round, mismatched yellow eyes make the mark, a soft heavy sans speaks plainly beside them, and the palette is jungle-night green-black lit by one deep yellow.",
+    "expression_move": "The two eyes are the only drawn thing; everything else stays quiet so they can look at you.",
+    "differs_by": "No named competitors; against the casual-game shelf of bright multi-colour mascots, this keeps one colour on dark and lets a glance carry the character."
+  },
+  "axes": {
+    "playful_serious": -1,
+    "quiet_loud": -1,
+    "warm_cool": -1,
+    "friend_authority": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "single-family",
+    "display": {
+      "family": "Asta Sans",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        800
+      ],
+      "location": {
+        "wght": 800
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": -15,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Asta Sans",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        700
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "Two round eyes in the dark, one a little bigger, both glancing the same way: curious, a bit silly, never scary.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Mowgli Games",
+      "role": "display",
+      "location": null,
+      "tracking": -15,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "eyes": "brand-2",
+      "wordmark": "text"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "gold-brass-accent",
+      "why": "The user asked for a deep yellow key colour on dark (questionnaire A11); the flagged tone is that same yellow and its darker step, not a separate gold accent added for warmth."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "Dark ground with a deep yellow key colour is the user's stated preference.",
+      "evidence": "measured",
+      "source": "docs/brief/questionnaire.md A11"
+    },
+    {
+      "claim": "Round, mismatched eyes carry 'soft, round, and a little silly' without drawing a full mascot, so the mark stays simple at 16 px.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Round forms read as soft (shape-language studies, context-bound).",
+      "evidence": "limited",
+      "source": "Jiang et al. 2016"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "cd134cba9ac8efe564ebe002bc312e325c40dea43935eb49744d615c43bf0e70"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 6,
+      "info": 12
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.8,
+        "threshold": 3.0,
+        "message": "light: primary #f5b700 on background #ffffff is 1.80:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#f5b700",
+          "to": "#c7870e",
+          "how": "use primary-500 (same scale)",
+          "ratio_after": 3.04
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.25,
+        "threshold": 3.0,
+        "message": "light: border #e3e7e5 on background #ffffff is 1.25:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#e3e7e5",
+          "to": "#6a7670",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.73
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.63,
+        "threshold": 3.0,
+        "message": "dark: link #f5b700 on text #f1f4f2 is 1.63:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#f5b700",
+          "to": "#aa6b09",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.94
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.29,
+        "threshold": 3.0,
+        "message": "dark: border #4c5952 on background #13201a is 2.29:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#4c5952",
+          "to": "#6a7670",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.55
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#f5b700 sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display+text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "27/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Asta Sans lacks English auxiliary/punctuation characters: Á À Ă Â Ä Ã Ā Æ Ç É È Ĕ (+63)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display+text.coverage.ko_Kore.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "69/832",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Asta Sans lacks Korean auxiliary/punctuation characters: ᄀ-ᄒ ᅡ-ᅵ ᆨ-ᇂ 丘 串 乃 久 乖 九 乞 乫 乾 (+751)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display+text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "138/319",
+        "threshold": "GF Latin Core",
+        "message": "Asta Sans misses 181/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.display+text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 27,
+        "threshold": null,
+        "message": "Asta Sans: ~27 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.8,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: brand-2 #f5b700 on #ffffff is 1.80:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.8,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: brand-2 #f5b700 on #ffffff is 1.80:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.8,
+        "threshold": null,
+        "message": "symbol-only: brand-2 #f5b700 is 1.80:1 on #ffffff; drawn in the light text colour #121f19 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.8,
+        "threshold": null,
+        "message": "favicon-16: brand-2 #f5b700 is 1.80:1 on #ffffff; drawn in the light text colour #121f19 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.8,
+        "threshold": null,
+        "message": "favicon-32: brand-2 #f5b700 is 1.80:1 on #ffffff; drawn in the light text colour #121f19 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.8,
+        "threshold": null,
+        "message": "favicon-48: brand-2 #f5b700 is 1.80:1 on #ffffff; drawn in the light text colour #121f19 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "logo.thin-feature",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 0.94,
+          "gap_px2": 1.29
+        },
+        "threshold": ">= 1 px = 5.0 units (heuristic, uncalibrated)",
+        "message": "symbol at 20 px (min size): strokes/gaps thinner than 1 px (lost 0.94 px², clogged 1.29 px²)",
+        "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+      },
+      {
+        "id": "logo.small-size",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 1.56,
+          "gap_px2": 1.1
+        },
+        "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+        "message": "symbol at 16 px: features narrower than 1 px (lost 1.56 px², clogged 1.1 px²)",
+        "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–B",
+          "B–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–B, B–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "card": {
+    "ground": "dark"
+  },
+  "palette_build": {
+    "dark_bg": "#13201a",
+    "strategy": "mono"
+  }
+}

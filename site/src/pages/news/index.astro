@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import NewsList from '../../components/sections/NewsList.astro';
+
+const posts = (await getCollection('news', (p) => !p.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="News">
+  <NewsList title="News" posts={posts} headingLevel="h1" />
+</Base>
