@@ -100,6 +100,21 @@ for (const file of walk(src, ['.astro', '.css', '.scss', '.ts', '.js', '.mjs', '
   });
 }
 
+// ---------- 2b. 공개 소식 글마다 페이지가 만들어졌는지 ----------
+// (예: 두 언어 글이 같은 id 로 충돌해 한쪽이 사라지는 경우를 잡는다)
+if (existsSync(dist)) {
+  const newsDir = join(src, 'content', 'news');
+  for (const file of walk(newsDir, ['.md', '.mdx'])) {
+    const fm = (readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+    const field = (k) => fm.match(new RegExp(`^${k}:\\s*["']?([^"'\\r\\n]+?)["']?\\s*$`, 'm'))?.[1];
+    if (field('draft') === 'true') continue;
+    const lang = field('lang') || 'en';
+    const name = field('key') || file.replace(/\\/g, '/').split('/').pop().replace(/\.mdx?$/, '');
+    const page = join(dist, ...(lang === 'en' ? [] : [lang]), 'news', name, 'index.html');
+    if (!existsSync(page)) err(rel(file), `공개 글인데 페이지가 없음: ${rel(page)} (key/파일 이름 충돌?)`);
+  }
+}
+
 // ---------- 3. 콘텐츠 TODO ----------
 for (const file of walk(join(src, 'data'), ['.json']).concat(walk(join(src, 'content'), ['.md', '.mdx']))) {
   readFileSync(file, 'utf8').split(/\r?\n/).forEach((line, i) => {

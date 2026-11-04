@@ -11,6 +11,16 @@
 
 ---
 
+## 2026-11-05 — 수정·보수 — 오픈 공지 공개 + 번역 글 충돌 버그 수정
+- 무엇을: 오픈 공지 영어·한국어 `draft: false`. 번역 짝 필드 `slug` → `key` (content.config.ts, lib/news.ts, site-edit 스킬, CLAUDE.md). `check-site.mjs` 에 "공개 글마다 페이지 존재" 검사 추가
+- 왜: 사용자 요청 "공지 공개해줘". 공개해 보니 영어 글 페이지가 안 만들어짐 — Astro 가 frontmatter `slug` 를 entry id 로 써서 두 언어 글(slug: hello)이 같은 id 로 충돌, 한쪽이 덮어써짐
+- 검증: 새 검사가 수정 전 빌드에서 "공개 글인데 페이지가 없음"으로 실패하는 것 확인 → 수정 후 `verify`·`verify:pages` 통과(오류 0, 경고 0), /news/hello ↔ /ko/news/hello 서로 연결
+
+## 2026-11-05 — 배포 — 첫 공개 배포 확인 (https://doodle30.github.io/Homepage/)
+- 무엇을: 사용자가 저장소를 공개로 전환하고 Pages Source 를 GitHub Actions 로 설정. 워크플로 실행(d593cc7) 성공
+- 왜: GitHub 무료 계정은 비공개 저장소로 Pages 를 쓸 수 없음. 공개 전 점검: 추적 파일 436개에 비밀값 없음, 노출 개인정보는 사이트에 이미 공개된 이메일뿐
+- 검증: 실제 주소에서 영어·한국어 8개 페이지, 로고·파비콘·og.png·apple-touch-icon·사이트맵 모두 200, 없는 주소는 404 + 두 언어 안내 페이지. canonical·hreflang·og:image 가 배포 주소로 나옴. 브라우저 화면 확인
+
 ## 2026-11-05 — 구축·배포 — GitHub Pages 배포, 한국어 페이지, 공유 이미지, 배포 스킬
 - 무엇을:
   - 배포: `.github/workflows/deploy.yml`(master push → `verify:pages` 통과 시 GitHub Pages), `site/deploy.json`(https://doodle30.github.io/Homepage/), `tools/pages-build.mjs`

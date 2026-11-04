@@ -32,7 +32,7 @@ title: "제목"
 date: 2026-11-05
 summary: "목록에 보일 한두 문장"
 lang: en            # ko 폴더 글은 ko
-slug: hello         # 영어·한국어 짝 글은 같은 slug → /news/hello ↔ /ko/news/hello
+key: hello          # 영어·한국어 짝 글은 같은 key → /news/hello ↔ /ko/news/hello  (slug 라는 이름은 쓰지 말 것)
 draft: false        # true 면 사이트에 안 나옴
 ```
 

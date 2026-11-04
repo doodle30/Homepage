@@ -12,7 +12,7 @@
 | `brand-work/` | brand-identity 스킬 작업 폴더(시안·보드) | brand-identity 스킬 |
 | `site/` | Astro 정적 사이트 (영어 `/`, 한국어 `/ko`) | 모든 site-* 스킬 |
 | `site/src/data/site.json` · `site.ko.json` | 언어별 문구 전부(메뉴·히어로·소개·연락처·UI 라벨 `ui`) | `site-edit` |
-| `site/src/content/news/en/` · `ko/` | 소식 글(Markdown). 번역 짝은 frontmatter `slug` 를 같게 | `site-edit` |
+| `site/src/content/news/en/` · `ko/` | 소식 글(Markdown). 번역 짝은 frontmatter `key` 를 같게 | `site-edit` |
 | `site/src/views/` | 페이지 본문(언어 공통). `src/pages/` 와 `src/pages/ko/` 는 언어만 넘기는 얇은 파일 | `site-build` |
 | `site/src/lib/i18n.ts` | `url()`·`asset()`·`getSite()` — 모든 내부 링크·정적 파일 경로가 거치는 곳 | `site-build` |
 | `site/src/styles/tokens.css` | `brand/tokens/tokens.css`의 복사본. **직접 수정 금지** | `site-build`만 |
@@ -64,5 +64,5 @@ node tools/render-og.mjs           # 공유 이미지 다시 만들기 (brand/og
 - 브랜드: **확정 (2026-11-05)** — Mowgli Games "Bounce O" (Cocoa + Yolk, Bagel Fat One / IBM Plex Sans KR). 요약·규칙 `brand/brand.md`. 다크 테마 기본.
 - 회사 정보: 접수 완료 — `docs/brief/brief.json`. 게임 목록·추가 SNS는 나중에.
 - 언어: 영어(`/`) + 한국어(`/ko`). 한국어 문구는 Claude 번역 — 사용자 확인 대기.
-- 배포: GitHub Pages `https://doodle30.github.io/Homepage/` (master push 시 자동). 도메인 미정.
+- 배포: **운영 중 (2026-11-05~)** GitHub Pages `https://doodle30.github.io/Homepage/` — 공개 저장소, master push 시 자동. 도메인 미정.
 - 정기 점검: **자동 실행 미설정** — 예약 작업 생성이 권한 확인에서 막힘. 지금은 "사이트 점검해줘"로 수동 실행.

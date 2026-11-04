@@ -9,5 +9,5 @@ export async function getPosts(locale: Locale): Promise<Post[]> {
   return all.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
-/** 주소에 쓰는 이름: frontmatter slug, 없으면 파일 이름(폴더 제외) */
-export const slugOf = (p: Post) => p.data.slug ?? p.id.split('/').pop()!;
+/** 주소에 쓰는 이름: frontmatter key, 없으면 파일 이름(폴더 제외) */
+export const slugOf = (p: Post) => p.data.key ?? p.id.split('/').pop()!;
