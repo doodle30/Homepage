@@ -1,5 +1,7 @@
 ---
-import site from '../data/site.json';
+import { getSite, type Locale } from '../lib/i18n';
+interface Props { locale: Locale }
+const site = getSite(Astro.props.locale);
 const { contact } = site;
 const year = new Date().getFullYear();
 ---
@@ -10,7 +12,7 @@ const year = new Date().getFullYear();
       {contact.email && <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>}
       {contact.links.map((l) => <li><a href={l.href} rel="noopener">{l.label}</a></li>)}
     </ul>
-    <p class="copy">© {year} {site.name}</p>
+    <p class="copy">© {year} Mowgli Games</p>
   </div>
 </footer>
 <style>

@@ -1,19 +1,23 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-interface Props { title?: string; posts: CollectionEntry<'news'>[]; headingLevel?: 'h1' | 'h2' }
-const { title = 'News', posts, headingLevel = 'h2' } = Astro.props;
+import { getSite, url, type Locale } from '../../lib/i18n';
+import { slugOf } from '../../lib/news';
+interface Props { locale: Locale; title?: string; posts: CollectionEntry<'news'>[]; headingLevel?: 'h1' | 'h2' }
+const { locale, posts, headingLevel = 'h2' } = Astro.props;
+const site = getSite(locale);
+const title = Astro.props.title ?? site.ui.news;
 const H = headingLevel;
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const fmt = (d: Date) => d.toLocaleDateString(site.ui.dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <section class="section">
   <div class="container">
     <H>{title}</H>
-    {posts.length === 0 ? <p>No news yet.</p> : (
+    {posts.length === 0 ? <p>{site.ui.noNews}</p> : (
       <ul>
         {posts.map((p) => (
           <li>
             <time datetime={p.data.date.toISOString().slice(0, 10)}>{fmt(p.data.date)}</time>
-            <a href={`/news/${p.id}`}>{p.data.title}</a>
+            <a href={url(`/news/${slugOf(p)}`, locale)}>{p.data.title}</a>
             <p>{p.data.summary}</p>
           </li>
         ))}

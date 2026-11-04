@@ -1,0 +1,7 @@
+{
+  "target": "github-pages",
+  "repo": "doodle30/Homepage",
+  "url": "https://doodle30.github.io",
+  "base": "/Homepage",
+  "branch": "master"
+}

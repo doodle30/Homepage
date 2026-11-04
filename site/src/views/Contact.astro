@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSite, type Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const site = getSite(locale);
+const { contact, ui } = site;
+---
+<Base locale={locale} title={ui.contactTitle}>
+  <section class="section">
+    <div class="container">
+      <h1>{ui.contactTitle}</h1>
+      <dl>
+        {contact.email && <><dt>{ui.email}</dt><dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd></>}
+        {contact.links.map((l) => <><dt>{l.label}</dt><dd><a href={l.href} rel="noopener">{l.href.replace(/^https?:\/\//, '')}</a></dd></>)}
+      </dl>
+    </div>
+  </section>
+</Base>
+<style>
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.75rem 2rem; margin-top: 2rem; }
+  dt { color: var(--bi-text-muted); }
+  dd { margin: 0; }
+</style>

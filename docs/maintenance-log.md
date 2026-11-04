@@ -11,6 +11,19 @@
 
 ---
 
+## 2026-11-05 — 구축·배포 — GitHub Pages 배포, 한국어 페이지, 공유 이미지, 배포 스킬
+- 무엇을:
+  - 배포: `.github/workflows/deploy.yml`(master push → `verify:pages` 통과 시 GitHub Pages), `site/deploy.json`(https://doodle30.github.io/Homepage/), `tools/pages-build.mjs`
+  - 하위 경로 대응: 모든 링크·파일을 `src/lib/i18n.ts` 의 `url()`/`asset()` 로. `check-site.mjs --base` 추가(누락 시 오류), `<link>` 대상 파일 점검 추가
+  - 한국어: `/ko` 전 페이지, `site.ko.json`(Claude 번역 — 확인 필요), 언어 전환 버튼, hreflang, 번역 없는 글은 그 언어 소식 목록으로
+  - 구조: `src/views/`(언어 공통 본문) + `src/pages/`·`pages/ko/` 얇은 파일, 소식 글 `news/en|ko/` + `lang`·`slug`
+  - 공유: `og.png`(1200x630, 원본 `brand/og/og.html`, `tools/render-og.mjs`), OG·Twitter 메타, canonical, 사이트맵(`@astrojs/sitemap`)
+  - 콘텐츠: 오픈 공지 영어·한국어 초안(`draft: true`, 사용자 확인 대기)
+  - 하네스: `site-deploy` 스킬 추가, CLAUDE.md·site-edit·site-build·site-check 갱신
+- 왜: 사용자 요청 "배포 → 콘텐츠 → 한국어 → 정기 점검 순서대로 진행"
+- 검증: `verify`·`verify:pages`(base /Homepage) 통과, 경고 0. 음성 테스트로 base 누락·파일 누락 검출 확인. 브라우저: /ko, /ko/about 화면·언어 전환·전 페이지 200 확인
+- 미완료: 월간 자동 점검 예약 — 권한 확인에서 막힘(사용자 허용 필요). GitHub Pages 활성화(Settings → Pages → Source: GitHub Actions)는 사용자가 직접
+
 ## 2026-11-05 — 브랜드 — "Bounce O" 확정, 키트 제작, 사이트 반영
 - 무엇을: 오용 예시 2종(공을 바닥선에 내려놓기, 노란 공 추가) 추가 · 작은 아이콘을 코코아 타일 위 공으로 변경 · 가이드 키트(PDF 8쪽, 로고 17종, 토큰) → `brand/` 복사 + `brand/brand.md` 작성 · 사이트: tokens.css 교체, fonts.css(Bagel Fat One / IBM Plex Sans KR, Google Fonts 링크), logo.svg(어두운 배경용, 여백 잘라냄)·favicon·apple-touch-icon, `data-theme="dark"` 기본, h3는 본문 서체
 - 왜: 사용자가 로고 2번 Bounce O 선택

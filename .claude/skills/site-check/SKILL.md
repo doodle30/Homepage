@@ -7,13 +7,13 @@ description: 홈페이지 정기 점검·상태 확인에 사용. "사이트 점
 
 ## 절차
 
-1. `npm --prefix site run verify` 실행. 실패해도 계속 진행하고 출력은 그대로 보고서에 붙인다.
+1. `npm --prefix site run verify` 와 `verify:pages` 실행. 실패해도 계속 진행하고 출력은 그대로 보고서에 붙인다.
    - verify = `astro build` + `node tools/check-site.mjs site/dist` (기계 점검: 내부 링크, 이미지 alt,
      title/description, html lang, 소스의 하드코딩 색·폰트, 남은 `TODO:`).
 2. `site-auditor` 에이전트에게 사람 눈 점검을 맡긴다(병렬 가능):
    - 브랜드 일관성(`brand/brand.md` 대비), 문구 오탈자·말투 일관성, 날짜가 지난 공지/이벤트,
      연락처가 페이지마다 같은지, 1년 넘게 안 바뀐 연도 표기(© 연도 등).
-3. 가능하면 미리보기 서버를 띄워 브라우저로 홈·문의 페이지를 375px/1280px, 라이트/다크에서 확인하고
+3. 가능하면 미리보기 서버를 띄워 브라우저로 홈·문의·`/ko` 페이지를 375px/1280px 에서 확인하고
    콘솔 오류를 본다.
 4. 보고서를 `docs/reports/check-YYYY-MM-DD.md`로 저장:
 

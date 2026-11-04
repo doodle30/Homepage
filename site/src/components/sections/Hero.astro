@@ -1,12 +1,13 @@
 ---
-interface Props { title: string; body: string; cta?: { label: string; href: string } }
-const { title, body, cta } = Astro.props;
+import { url, type Locale } from '../../lib/i18n';
+interface Props { locale: Locale; title: string; body: string; cta?: { label: string; href: string } }
+const { locale, title, body, cta } = Astro.props;
 ---
 <section class="hero section">
   <div class="container">
     <h1>{title}</h1>
     <p class="lead">{body}</p>
-    {cta && <a class="btn" href={cta.href}>{cta.label}</a>}
+    {cta && <a class="btn" href={url(cta.href, locale)}>{cta.label}</a>}
   </div>
 </section>
 <style>

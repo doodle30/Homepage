@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- 공유 미리보기 이미지 원본 (1200x630). 다시 만들기: node tools/render-og.mjs -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=IBM+Plex+Sans+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<style>
+  html, body { margin: 0; }
+  body { width: 1200px; height: 630px; background: var(--bi-brand-1); color: var(--bi-text);
+         display: flex; flex-direction: column; justify-content: center; padding: 0 96px; box-sizing: border-box;
+         font-family: "IBM Plex Sans KR", sans-serif; position: relative; overflow: hidden; }
+  [data-theme] { }
+  .logo { height: 104px; width: auto; display: block; align-self: flex-start; margin-bottom: 44px; }
+  h1 { font-family: "Bagel Fat One", sans-serif; font-weight: 400; font-size: 76px; line-height: 1.05;
+       letter-spacing: -0.01em; margin: 0 0 24px; color: var(--bi-text); }
+  p { font-size: 28px; margin: 0; color: var(--bi-text-muted); max-width: 900px; }
+  .ball { position: absolute; right: 96px; bottom: 84px; width: 72px; height: 72px; border-radius: 50%; background: var(--bi-brand-2); }
+  .shadow { position: absolute; right: 102px; bottom: 56px; width: 60px; height: 12px; border-radius: 50%; background: var(--bi-surface-alt); }
+</style>
+</head>
+<body data-theme="dark">
+  <img class="logo" src="logo.svg" alt="Mowgli Games">
+  <h1>Soft, round, and a little silly.</h1>
+  <p>Independent casual games from Korea · 모글리 게임즈</p>
+  <div class="shadow"></div><div class="ball"></div>
+</body>
+</html>

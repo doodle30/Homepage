@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import NewsList from '../components/sections/NewsList.astro';
+import { getSite, type Locale } from '../lib/i18n';
+import { getPosts } from '../lib/news';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const site = getSite(locale);
+const posts = await getPosts(locale);
+---
+<Base locale={locale} title={site.ui.news}>
+  <NewsList locale={locale} title={site.ui.news} posts={posts} headingLevel="h1" />
+</Base>

@@ -6,9 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "check": "node ../tools/check-site.mjs dist src",
-    "verify": "astro build && node ../tools/check-site.mjs dist src"
+    "verify": "astro build && node ../tools/check-site.mjs dist src",
+    "build:pages": "node ../tools/pages-build.mjs",
+    "verify:pages": "node ../tools/pages-build.mjs --check"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.4.5"
   }
 }

@@ -1,0 +1,29 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { getSite, url, type Locale } from '../lib/i18n';
+import { getPosts, slugOf, type Post } from '../lib/news';
+import { locales } from '../lib/i18n';
+
+interface Props { locale: Locale; post: Post }
+const { locale, post } = Astro.props;
+const site = getSite(locale);
+const { Content } = await render(post);
+const slug = slugOf(post);
+const routes = Object.fromEntries(await Promise.all(locales.map(async (l) =>
+  [l, (await getPosts(l)).some((p) => slugOf(p) === slug) ? `/news/${slug}` : '/news'])));
+const date = post.data.date.toLocaleDateString(site.ui.dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base locale={locale} title={post.data.title} description={post.data.summary} routes={routes}>
+  <article class="section">
+    <div class="container prose">
+      <p class="meta"><a href={url('/news', locale)}>{site.ui.news}</a> · <time datetime={post.data.date.toISOString().slice(0, 10)}>{date}</time></p>
+      <h1>{post.data.title}</h1>
+      <Content />
+    </div>
+  </article>
+</Base>
+<style>
+  .prose { max-width: 44rem; }
+  .meta { color: var(--bi-text-muted); font-size: 0.9rem; }
+</style>

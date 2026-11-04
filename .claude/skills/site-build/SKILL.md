@@ -24,23 +24,28 @@ brand-identity 스킬에서 사용자가 세트를 고르고 `kit`까지 만든 
    - 로고: `brand/logo/`의 가로형 SVG → `site/public/logo.svg`, 반전형 → `logo-reversed.svg`,
      favicon/app icon → `site/public/favicon.svg`, `apple-touch-icon.png`.
    - 컴포넌트가 쓰는 `--bi-*` 역할 이름이 새 tokens.css에 모두 있는지 grep으로 대조. 없는 이름은 가장 가까운 역할로 교체.
-4. `npm --prefix site run verify` → 통과할 때까지 수정. 브라우저 미리보기(`npm --prefix site run dev`)로
+4. 공유 이미지 갱신: `brand/og/logo.svg` 를 새 로고로 바꾸고 `node tools/render-og.mjs`.
+5. `npm --prefix site run verify` 와 `verify:pages` → 통과할 때까지 수정. 브라우저 미리보기(`npm --prefix site run dev`)로
    라이트/다크, 모바일 폭(375px)에서 헤더·히어로·푸터를 눈으로 확인.
-5. `CLAUDE.md` "현재 상태"의 브랜드 줄 갱신, `docs/maintenance-log.md` 기록.
+6. `CLAUDE.md` "현재 상태"의 브랜드 줄 갱신, `docs/maintenance-log.md` 기록.
 
 ## B. 최초 구축 / 새 페이지 유형
 
 1. 필요한 정보가 `site/src/data/site.json`에 있는지 확인. 없는 사실은 지어내지 말고 한 번에 모아서 묻는다
    (회사명, 한 줄 소개, 메뉴, 서비스 항목, 연락처, 주소, 사업자 정보, CTA).
 2. 구조 원칙:
-   - 페이지 = `src/pages/*.astro` 는 섹션 컴포넌트를 조립만 한다. 문구는 `site.json`/Markdown에서 읽는다.
+   - 두 언어: 페이지 본문은 `src/views/X.astro` (props `locale`) 하나로 만들고, `src/pages/x.astro` 와
+     `src/pages/ko/x.astro` 는 `<View locale="en|ko" />` 만 둔다. 문구는 `getSite(locale)` 에서.
+   - 링크·이미지·정적 파일은 반드시 `url(path, locale)` / `asset(path)` (`src/lib/i18n.ts`). 하드코딩 `/경로` 금지.
+   - 새 UI 라벨은 `site.json` 과 `site.ko.json` 의 `ui` 에 같은 키로 추가.
+   - 페이지 = 섹션 컴포넌트를 조립만 한다. 문구는 데이터 파일/Markdown에서 읽는다.
    - 섹션 컴포넌트 = `src/components/sections/*.astro`. props로 데이터를 받고, 스타일은 `<style>` 안에서 토큰만 사용.
    - 공통 레이아웃 = `src/layouts/Base.astro` (메타태그, OG, lang, 헤더/푸터, 다크모드).
    - 반복 콘텐츠(소식, 사례, 채용)는 `src/content/<이름>/` 컬렉션 + `src/content.config.ts` 스키마.
 3. 접근성 기본: 시맨틱 태그, 이미지 alt, 키보드 포커스 표시(`--bi-focus`), 링크는 밑줄 또는 본문과 3:1 이상 구분,
    본문 대비는 brand.md의 테스트된 조합만 사용.
 4. 새 섹션을 만들면 `site/src/components/sections/README.md` 표에 한 줄 추가(이름, 받는 데이터, 쓰는 페이지).
-5. `verify` 통과 → 미리보기 확인 → 로그 기록.
+5. `verify`·`verify:pages` 통과 → 미리보기 확인 → 로그 기록.
 
 ## 하지 말 것
 - tokens.css 직접 편집, 컴포넌트에 hex/폰트명 하드코딩.

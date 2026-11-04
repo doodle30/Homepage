@@ -1,12 +1,16 @@
 #!/usr/bin/env node
-// 홈페이지 정적 점검. 사용: node tools/check-site.mjs [distDir] [srcDir]
+// 홈페이지 정적 점검. 사용: node tools/check-site.mjs [distDir] [srcDir] [--base /Homepage]
+// --base: 하위 경로 배포 빌드를 점검할 때. 루트 상대 링크가 모두 이 경로로 시작해야 한다.
 // 오류가 하나라도 있으면 종료 코드 1. 경고는 통과에 영향 없음.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, dirname, extname, resolve } from 'node:path';
 
 const root = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
-const dist = resolve(process.argv[2] ?? join(root, 'site', 'dist'));
-const src = resolve(process.argv[3] ?? join(root, 'site', 'src'));
+const args = process.argv.slice(2);
+const bi = args.indexOf('--base');
+const BASE = bi >= 0 ? args.splice(bi, 2)[1].replace(/\/$/, '') : '';
+const dist = resolve(args[0] ?? join(root, 'site', 'dist'));
+const src = resolve(args[1] ?? join(root, 'site', 'src'));
 
 const errors = [];
 const warnings = [];
@@ -33,8 +37,12 @@ if (!existsSync(dist)) {
   if (htmlFiles.length === 0) err(rel(dist), 'HTML 파일이 없음');
 
   const resolveTarget = (fromFile, href) => {
-    const clean = decodeURI(href.split('#')[0].split('?')[0]);
+    let clean = decodeURI(href.split('#')[0].split('?')[0]);
     if (!clean) return true; // 같은 페이지 앵커
+    if (clean.startsWith('/') && BASE) {
+      if (clean !== BASE && !clean.startsWith(BASE + '/')) return false; // base 경로 누락
+      clean = clean.slice(BASE.length) || '/';
+    }
     const base = clean.startsWith('/') ? join(dist, clean) : join(dirname(fromFile), clean);
     return [base, join(base, 'index.html'), base + '.html'].some((p) => existsSync(p) && statSync(p).isFile());
   };
@@ -63,6 +71,10 @@ if (!existsSync(dist)) {
         continue;
       }
       if (!resolveTarget(file, href)) err(where, `깨진 내부 링크: ${href}`);
+    }
+    for (const m of html.matchAll(/<link\b[^>]*\srel="(?:icon|apple-touch-icon|stylesheet|sitemap)"[^>]*>/gi)) {
+      const href = m[0].match(/\shref="([^"]+)"/i)?.[1];
+      if (href && !/^https?:/i.test(href) && !resolveTarget(file, href)) err(where, `<link> 대상 파일 없음: ${href}`);
     }
     if (/TODO:/.test(html.replace(/<!--[\s\S]*?-->/g, ''))) warn(where, '페이지에 TODO: 문구가 보임');
   }
@@ -102,5 +114,6 @@ const show = (label, list) => {
 };
 show('오류', errors);
 show('경고', warnings);
+if (BASE) console.log(`\n(base 경로 ${BASE} 기준으로 점검)`);
 console.log(`\n결과: ${errors.length ? '실패' : '통과'} — 오류 ${errors.length}, 경고 ${warnings.length}`);
 process.exit(errors.length ? 1 : 0);

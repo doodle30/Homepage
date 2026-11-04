@@ -3,6 +3,22 @@
   "tagline": "Soft, round, and a little silly.",
   "description": "Mowgli Games is an independent studio making soft, playful casual games that anyone can pick up and enjoy.",
   "lang": "en",
+  "langName": "English",
+  "ui": {
+    "skip": "Skip to content",
+    "home": "home",
+    "mainNav": "Main",
+    "languageNav": "Language",
+    "latestNews": "Latest news",
+    "news": "News",
+    "noNews": "No news yet.",
+    "contactTitle": "Contact",
+    "email": "Email",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "This page may have moved or no longer exists.",
+    "backHome": "Back home",
+    "dateLocale": "en-US"
+  },
   "nav": [
     { "label": "Games", "href": "/#games" },
     { "label": "About", "href": "/about" },

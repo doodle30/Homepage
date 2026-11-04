@@ -1,26 +1,38 @@
 ---
-import site from '../data/site.json';
-const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+import { getSite, url, asset, locales, type Locale } from '../lib/i18n';
+interface Props { locale: Locale; route: string; langRoutes: Record<Locale, string> }
+const { locale, route, langRoutes } = Astro.props;
+const site = getSite(locale);
+const others = locales.filter((l) => l !== locale);
 ---
 <header class="header">
   <div class="container bar">
-    <a href="/" class="brand" aria-label={`${site.name} home`}>
-      <img src="/logo.svg" alt={site.name} width="101" height="32" />
+    <a href={url('/', locale)} class="brand" aria-label={`${site.name} ${site.ui.home}`}>
+      <img src={asset('/logo.svg')} alt={site.name} width="101" height="32" />
     </a>
-    <nav aria-label="Main">
+    <nav aria-label={site.ui.mainNav}>
       <ul>
         {site.nav.map((item) => (
-          <li><a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>
+          <li><a href={url(item.href, locale)} aria-current={route === item.href ? 'page' : undefined}>{item.label}</a></li>
         ))}
       </ul>
+    </nav>
+    <nav aria-label={site.ui.languageNav} class="lang">
+      {others.map((l) => {
+        const o = getSite(l);
+        return <a href={url(langRoutes[l], l)} hreflang={l} lang={o.lang}>{o.langName}</a>;
+      })}
     </nav>
   </div>
 </header>
 <style>
   .header { border-bottom: 1px solid var(--bi-border); background: var(--bi-background); }
-  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; flex-wrap: wrap; }
+  .bar { display: flex; align-items: center; gap: 1rem 1.5rem; min-height: 4rem; flex-wrap: wrap; padding-block: 0.5rem; }
+  .brand { margin-right: auto; }
   .brand img { height: 2rem; width: auto; }
   ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
   nav a { color: var(--bi-text); text-decoration: none; font-weight: 500; }
   nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
+  .lang a { font-size: 0.9rem; color: var(--bi-text-muted); border: 1px solid var(--bi-border); border-radius: 999px; padding: 0.2em 0.8em; }
+  .lang a:hover { color: var(--bi-text); text-decoration: none; border-color: var(--bi-text-muted); }
 </style>

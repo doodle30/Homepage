@@ -1,12 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getSite, url } from '../lib/i18n';
+const en = getSite('en');
+const ko = getSite('ko');
 ---
-<Base title="Page not found">
+<Base locale="en" title={en.ui.notFoundTitle} routes={{ en: '/', ko: '/' }}>
   <section class="section">
     <div class="container">
-      <h1>Page not found</h1>
-      <p>This page may have moved or no longer exists.</p>
-      <a class="btn" href="/">Back home</a>
+      <h1>{en.ui.notFoundTitle}</h1>
+      <p>{en.ui.notFoundBody}</p>
+      <p lang="ko">{ko.ui.notFoundTitle}. {ko.ui.notFoundBody}</p>
+      <p class="actions">
+        <a class="btn" href={url('/', 'en')}>{en.ui.backHome}</a>
+        <a class="btn ghost" href={url('/', 'ko')} lang="ko">{ko.ui.backHome}</a>
+      </p>
     </div>
   </section>
 </Base>
+<style>
+  .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+  .ghost { background: transparent; color: var(--bi-primary); border: 2px solid var(--bi-primary); }
+</style>
