@@ -2,9 +2,13 @@
 title: 빨간펜 무쌍 개인정보처리방침
 description: 모바일 게임 「빨간펜 무쌍」(com.doodle30.redpen)의 개인정보처리방침
 lang: ko
+link:
+  label: "이전 버전: 2026년 11월 8일 최초 시행본 보기"
+  path: /games/redpen/privacy/2026-11-08
+  locale: ko
 ---
 
-<!-- 원본: D:\GooglePlaystore\Idea\Redpen-game\hosting\public\privacy\index.html (사용자 승인본, 2026-11-08 시행). 문장·표 내용은 고치지 않는다. -->
+<!-- 원본: D:\GooglePlaystore\Idea\Redpen-game\hosting\public\privacy\index.html (사용자 승인본). 2026-11-08 개정: 앱 0.2.1 결제 제거. 문장·표 내용은 고치지 않는다. -->
 
 <p class="meta">시행일: 2026년 11월 8일</p>
 
@@ -14,10 +18,9 @@ lang: ko
 <div class="tbl"><table>
 <tr><th>질문</th><th>답</th></tr>
 <tr><td>회원가입이나 로그인이 있나요?</td><td>없습니다. 이름, 이메일, 전화번호를 받지 않습니다.</td></tr>
-<tr><td>게임 기록은 어디에 저장되나요?</td><td>이용자의 기기 안에만 저장됩니다(최고 점수, 영구 강화, 튜토리얼 완료 여부, 패스 보유 여부). 개발자 서버로 보내지 않습니다.</td></tr>
+<tr><td>게임 기록은 어디에 저장되나요?</td><td>이용자의 기기 안에만 저장됩니다(최고 점수, 영구 강화, 튜토리얼 완료 여부). 개발자 서버로 보내지 않습니다.</td></tr>
 <tr><td>무엇이 기기 밖으로 나가나요?</td><td>게임 이용 통계, 오류 기록, 광고 식별자 등 기기·이용 정보입니다(아래 2절).</td></tr>
-<tr><td>누가 처리하나요?</td><td>Google(Firebase, AdMob, Google Play)이 처리합니다. 개발자는 자체 서버를 운영하지 않습니다.</td></tr>
-<tr><td>결제 카드 정보를 보나요?</td><td>아닙니다. 결제는 Google Play가 처리하며 개발자는 카드 정보를 받지 않습니다.</td></tr>
+<tr><td>누가 처리하나요?</td><td>Google(Firebase, AdMob)이 처리합니다. 개발자는 자체 서버를 운영하지 않습니다.</td></tr>
 </table></div>
 
 <h2>2. 처리하는 정보와 목적</h2>
@@ -28,12 +31,10 @@ lang: ko
 <tr><td>대략적 위치</td><td>IP 주소에서 추정한 국가·지역(정밀 위치는 수집하지 않음)</td><td>통계, 광고 제공, 부정 이용 방지</td><td>Google Firebase, Google AdMob</td></tr>
 <tr><td>오류 기록</td><td>앱 비정상 종료 기록, 오류 발생 위치, 오류 메시지의 해시값, 기기 상태</td><td>오류 수정</td><td>Google Firebase Crashlytics</td></tr>
 <tr><td>광고 식별자</td><td>Android 광고 ID, IP 주소, 광고 상호작용, 진단 정보</td><td>보상형 광고 제공(쓰러졌을 때 부활), 광고 성과 측정, 부정 클릭 방지</td><td>Google AdMob</td></tr>
-<tr><td>구매 기록</td><td>상품 ID("광고 없이 부활" 패스), 가격, 구매 시각, 구매 토큰</td><td>구매 확인·복원, 매출 통계</td><td>Google Play, Google Firebase Analytics</td></tr>
 </table></div>
 <ul>
 <li>앱은 이용자가 직접 입력하는 글자를 받지 않습니다. 문제 문장 대신 문제 번호만 보냅니다.</li>
-<li>결제 수단(카드 번호 등)은 Google Play가 직접 처리하며, Google 개인정보처리방침이 적용됩니다.</li>
-<li>기기에만 저장되는 정보: 최고 점수, 영구 강화와 판 수, 튜토리얼 완료 여부, "광고 없이 부활" 패스 보유 여부. 앱을 삭제하면 함께 지워집니다. 패스는 앱을 다시 설치해도 Google Play 구매 내역으로 복원됩니다.</li>
+<li>기기에만 저장되는 정보: 최고 점수, 영구 강화와 판 수, 튜토리얼 완료 여부. 앱을 삭제하면 함께 지워집니다.</li>
 </ul>
 
 <h2>3. 보유 기간</h2>
@@ -43,7 +44,6 @@ lang: ko
 <tr><td>Crashlytics 오류 기록</td><td>90일 뒤 삭제 절차 시작(Google 정책)</td></tr>
 <tr><td>AdMob 광고 데이터</td><td>Google 정책에 따름</td></tr>
 <tr><td>기기 저장 게임 기록</td><td>앱 삭제 또는 앱 데이터 삭제 시까지</td></tr>
-<tr><td>구매 기록</td><td>관련 법령(전자상거래법 등)이 정한 기간. 결제 기록은 Google Play가 보관</td></tr>
 </table></div>
 
 <h2>4. 제3자 제공과 처리 위탁</h2>
@@ -52,12 +52,11 @@ lang: ko
 <tr><th>받는 자</th><th>이전 국가</th><th>항목</th><th>목적</th><th>이전 방법·시기</th><th>보유 기간</th></tr>
 <tr><td>Google LLC (Firebase Analytics, Crashlytics)</td><td>미국 등 Google 데이터센터 소재국</td><td>2절의 이용 기록, 기기·앱 정보, 오류 기록</td><td>통계, 오류 분석</td><td>앱 사용 중 네트워크로 전송</td><td>3절</td></tr>
 <tr><td>Google LLC (AdMob)</td><td>미국 등</td><td>광고 ID, IP 주소, 광고 상호작용</td><td>광고 제공·측정</td><td>광고 요청 시 네트워크로 전송</td><td>Google 정책</td></tr>
-<tr><td>Google LLC (Google Play 결제)</td><td>미국 등</td><td>구매 정보</td><td>결제 처리</td><td>구매 시</td><td>Google 정책</td></tr>
 </table></div>
 <ul>
 <li>AdMob은 광고 제공 과정에서 광고 ID 등을 Google의 광고 네트워크와 광고주 측정에 사용할 수 있습니다. Google의 처리 방식: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
 <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-<li>국외 이전을 원하지 않으면 앱을 삭제하거나 5절의 방법으로 수집을 줄일 수 있습니다. 다만 광고와 결제는 이전 없이 제공할 수 없습니다.</li>
+<li>국외 이전을 원하지 않으면 앱을 삭제하거나 5절의 방법으로 수집을 줄일 수 있습니다. 다만 광고는 이전 없이 제공할 수 없습니다.</li>
 </ul>
 
 <h2>5. 이용자의 권리와 행사 방법</h2>
@@ -67,7 +66,6 @@ lang: ko
 <tr><td>맞춤 광고 끄기</td><td>기기 <b>설정 → Google → 광고</b>(또는 <b>설정 → 개인정보 보호 → 광고</b>)에서 "광고 ID 삭제" 또는 "광고 ID 재설정"</td></tr>
 <tr><td>기기의 게임 기록 지우기</td><td>앱 삭제, 또는 기기 <b>설정 → 앱 → 빨간펜 무쌍 → 저장공간 → 데이터 삭제</b></td></tr>
 <tr><td>이미 전송된 통계 삭제 요청</td><td>아래 문의처로 요청. 앱 인스턴스 ID를 확인할 방법을 안내하고, 확인되면 Google Analytics 사용자 삭제 기능으로 지웁니다</td></tr>
-<tr><td>구매 기록</td><td>Google Play 계정의 주문 내역에서 확인. 환불은 Google Play 환불 정책에 따름</td></tr>
 </table></div>
 <p>요청은 10일 안에 답하겠습니다. 만 14세 미만 아동의 법정대리인도 같은 방법으로 요청할 수 있습니다.</p>
 
@@ -99,4 +97,4 @@ lang: ko
 
 <h2>10. 방침 변경</h2>
 <p>이 방침이 바뀌면 시행 7일 전에 이 페이지와 Google Play 앱 설명에 알립니다.</p>
-<ul><li>시행일: 2026년 11월 8일</li><li>이전 버전: 없음</li></ul>
+<ul><li>시행일: 2026년 11월 8일</li><li>변경 이력: 2026년 11월 8일 — 앱 0.2.1에서 결제 기능을 빼면서 구매·결제 관련 내용 삭제</li></ul>

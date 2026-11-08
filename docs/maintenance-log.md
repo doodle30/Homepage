@@ -11,6 +11,11 @@
 
 ---
 
+## 2026-11-08 — 수정 — 「빨간펜 무쌍」 개인정보처리방침 개정 (앱 0.2.1 결제 제거) + 이전 버전 보관
+- 무엇을: `legal/ko/redpen-privacy.md` 에서 결제·구매 내용 8곳 삭제(1절 패스·Google Play·카드 줄, 2절 구매 기록 줄·결제 수단·패스 설명, 3절·5절 구매 기록 줄, 4절 Google Play 결제 줄·"광고와 결제" → "광고"), 10절 "이전 버전: 없음" → 변경 이력 + 이전 버전 링크. 최초 시행본은 `legal/ko/redpen-privacy-2026-11-08.md` → `/ko/games/redpen/privacy/2026-11-08/` 로 그대로 보관. 페이지 파일 `privacy.astro` → `privacy/index.astro`, LegalDoc 에 `routes`(보관본 언어 전환용). 영어 안내 페이지는 결제 문구 없어 그대로
+- 왜: 앱 0.2.1(versionCode 3)에서 Google Play 결제("광고 없이 부활" 패스) 제거. 사용자가 "지금 → 바꾼 뒤" 표와 시행일 A안(게시일 즉시 시행 + 변경 이력 + 이전 버전 보관) 승인. 원본 `Redpen-game/hosting/public/privacy/index.html`·`store/privacy-policy.md` 도 같은 본문으로 맞춤(그 저장소는 커밋 안 함)
+- 검증: `verify`·`verify:pages` 통과(오류 0, 경고 0). 보관본 본문 = 최초 시행본 원문 확인. 현재본·보관본이 서로 링크(base 포함)
+
 ## 2026-11-08 — 구축 — 「빨간펜 무쌍」 개인정보처리방침 페이지 (/ko/games/redpen/privacy)
 - 무엇을: `src/content/legal/ko/redpen-privacy.md`(원본 `D:\GooglePlaystore\Idea\Redpen-game\hosting\public\privacy\index.html` 본문 그대로), `legal` 컬렉션(content.config.ts), `src/views/LegalDoc.astro`(표는 좁은 화면에서 가로 스크롤, 토큰만 사용), `src/pages/ko/games/redpen/privacy.astro`. 영어 안내 페이지 `/games/redpen/privacy`(`legal/en/redpen-privacy.md`, Claude 초안 2문장 + 한국어 원문 링크). 메뉴·푸터 미노출(사용자 결정)
 - 왜: Google Play Console 앱 콘텐츠 → 개인정보처리방침에 넣을 로그인 없는 공개 URL. 문장·표는 사용자 승인본이라 수정하지 않음

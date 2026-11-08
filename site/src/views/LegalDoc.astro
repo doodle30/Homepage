@@ -4,13 +4,14 @@ import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { url, type Locale } from '../lib/i18n';
 
-interface Props { locale: Locale; id: string }
-const { locale, id } = Astro.props;
+// routes: 다른 언어 짝이 없는 문서(예: 이전 버전 보관본)의 언어 전환 경로
+interface Props { locale: Locale; id: string; routes?: Partial<Record<Locale, string>> }
+const { locale, id, routes } = Astro.props;
 const doc = await getEntry('legal', id);
 if (!doc) throw new Error(`legal 문서 없음: ${id}`);
 const { Content } = await render(doc);
 ---
-<Base locale={locale} title={doc.data.title} description={doc.data.description}>
+<Base locale={locale} title={doc.data.title} description={doc.data.description} routes={routes}>
   <article class="section">
     <div class="container legal">
       <h1>{doc.data.title}</h1>
