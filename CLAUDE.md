@@ -13,6 +13,7 @@
 | `site/` | Astro 정적 사이트 (영어 `/`, 한국어 `/ko`) | 모든 site-* 스킬 |
 | `site/src/data/site.json` · `site.ko.json` | 언어별 문구 전부(메뉴·히어로·소개·연락처·UI 라벨 `ui`) | `site-edit` |
 | `site/src/content/news/en/` · `ko/` | 소식 글(Markdown). 번역 짝은 frontmatter `key` 를 같게 | `site-edit` |
+| `site/src/content/legal/<언어>/` | 법적 고지문(게임 개인정보처리방침 등). 사용자 승인 원문 그대로 — 문장 수정 금지. 페이지는 `views/LegalDoc.astro` | `site-edit`(원문 교체만) |
 | `site/src/views/` | 페이지 본문(언어 공통). `src/pages/` 와 `src/pages/ko/` 는 언어만 넘기는 얇은 파일 | `site-build` |
 | `site/src/lib/i18n.ts` | `url()`·`asset()`·`getSite()` — 모든 내부 링크·정적 파일 경로가 거치는 곳 | `site-build` |
 | `site/src/styles/tokens.css` | `brand/tokens/tokens.css`의 복사본. **직접 수정 금지** | `site-build`만 |

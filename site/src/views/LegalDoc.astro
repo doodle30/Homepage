@@ -1,0 +1,50 @@
+---
+// 법적 고지문 페이지(개인정보처리방침 등). 본문은 src/content/legal/ 의 원문 그대로.
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url, type Locale } from '../lib/i18n';
+
+interface Props { locale: Locale; id: string }
+const { locale, id } = Astro.props;
+const doc = await getEntry('legal', id);
+if (!doc) throw new Error(`legal 문서 없음: ${id}`);
+const { Content } = await render(doc);
+---
+<Base locale={locale} title={doc.data.title} description={doc.data.description}>
+  <article class="section">
+    <div class="container legal">
+      <h1>{doc.data.title}</h1>
+      <Content />
+      {doc.data.link && <p class="doc-link"><a href={url(doc.data.link.path, doc.data.link.locale)} hreflang={doc.data.link.locale}>{doc.data.link.label}</a></p>}
+    </div>
+  </article>
+</Base>
+<style>
+  .legal { max-width: 48rem; }
+  .legal h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); }
+  .legal :global(h2) {
+    font-family: var(--font-text); font-weight: 600; letter-spacing: 0;
+    font-size: 1.2rem; line-height: 1.4;
+    margin: 2.25rem 0 0.6rem; padding-top: 1rem; border-top: 1px solid var(--bi-border);
+  }
+  .doc-link { font-weight: 600; }
+  .legal :global(.meta) { color: var(--bi-text-muted); }
+  .legal :global(ul) { padding-left: 1.25rem; margin: 0 0 1em; }
+  .legal :global(li) { margin-bottom: 0.35em; }
+  .legal :global(a) { overflow-wrap: anywhere; }
+  .legal :global(code) { font-size: 0.9em; overflow-wrap: anywhere; }
+  /* 표: 좁은 화면에서는 표만 가로 스크롤 */
+  .legal :global(.tbl) {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    margin: 0.5rem 0 1rem; border: 1px solid var(--bi-border); border-radius: 0.5rem;
+  }
+  .legal :global(table) { border-collapse: collapse; width: 100%; font-size: 0.94rem; }
+  .legal :global(th), .legal :global(td) {
+    border-bottom: 1px solid var(--bi-border); padding: 0.6rem 0.75rem;
+    text-align: left; vertical-align: top;
+  }
+  .legal :global(th + th), .legal :global(td + td) { border-left: 1px solid var(--bi-border); }
+  .legal :global(tr:last-child td) { border-bottom: 0; }
+  .legal :global(th) { background: var(--bi-surface-alt); color: var(--bi-text); font-weight: 600; white-space: nowrap; }
+  .legal :global(td) { background: var(--bi-surface); min-width: 7.5rem; }
+</style>

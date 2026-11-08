@@ -11,6 +11,11 @@
 
 ---
 
+## 2026-11-08 — 구축 — 「빨간펜 무쌍」 개인정보처리방침 페이지 (/ko/games/redpen/privacy)
+- 무엇을: `src/content/legal/ko/redpen-privacy.md`(원본 `D:\GooglePlaystore\Idea\Redpen-game\hosting\public\privacy\index.html` 본문 그대로), `legal` 컬렉션(content.config.ts), `src/views/LegalDoc.astro`(표는 좁은 화면에서 가로 스크롤, 토큰만 사용), `src/pages/ko/games/redpen/privacy.astro`. 영어 안내 페이지 `/games/redpen/privacy`(`legal/en/redpen-privacy.md`, Claude 초안 2문장 + 한국어 원문 링크). 메뉴·푸터 미노출(사용자 결정)
+- 왜: Google Play Console 앱 콘텐츠 → 개인정보처리방침에 넣을 로그인 없는 공개 URL. 문장·표는 사용자 승인본이라 수정하지 않음
+- 검증: `verify`·`verify:pages` 통과(오류 0, 경고 0). 원본과 본문 텍스트 동일(3,474자)·태그 수 동일(151). 375px: 페이지 가로 넘침 없음, 넓은 표 2개(480·720px)만 표 안에서 가로 스크롤. 1280px: 표 6개 모두 넘침 없음. 두 언어 hreflang 짝 연결
+
 ## 2026-11-05 — 수정·보수 — 오픈 공지 공개 + 번역 글 충돌 버그 수정
 - 무엇을: 오픈 공지 영어·한국어 `draft: false`. 번역 짝 필드 `slug` → `key` (content.config.ts, lib/news.ts, site-edit 스킬, CLAUDE.md). `check-site.mjs` 에 "공개 글마다 페이지 존재" 검사 추가
 - 왜: 사용자 요청 "공지 공개해줘". 공개해 보니 영어 글 페이지가 안 만들어짐 — Astro 가 frontmatter `slug` 를 entry id 로 써서 두 언어 글(slug: hello)이 같은 id 로 충돌, 한쪽이 덮어써짐
