@@ -11,6 +11,11 @@
 
 ---
 
+## 2026-11-14 — 수정 — Google Search Console 소유권 확인 메타 태그 추가
+- 무엇을: `site/src/layouts/Base.astro` `<head>`에 `<meta name="google-site-verification" ...>` 한 줄. 모든 페이지(영어·한국어)에 들어감
+- 왜: Google Play Console 개발자 프로필의 웹사이트(`https://doodle30.github.io/Homepage/`) 인증은 Search Console 소유자 확인을 거친다. URL 접두어 속성 + HTML 태그 방식(github.io라 DNS 방식 불가). 태그를 지우면 인증이 풀린다
+- 검증: `verify`·`verify:pages` 통과(오류 0, 경고 0). 빌드 결과 `index.html`·`ko/index.html`에 태그 확인
+
 ## 2026-11-08 — 수정 — 「빨간펜 무쌍」 개인정보처리방침 개정 (앱 0.2.1 결제 제거) + 이전 버전 보관
 - 무엇을: `legal/ko/redpen-privacy.md` 에서 결제·구매 내용 8곳 삭제(1절 패스·Google Play·카드 줄, 2절 구매 기록 줄·결제 수단·패스 설명, 3절·5절 구매 기록 줄, 4절 Google Play 결제 줄·"광고와 결제" → "광고"), 10절 "이전 버전: 없음" → 변경 이력 + 이전 버전 링크. 최초 시행본은 `legal/ko/redpen-privacy-2026-11-08.md` → `/ko/games/redpen/privacy/2026-11-08/` 로 그대로 보관. 페이지 파일 `privacy.astro` → `privacy/index.astro`, LegalDoc 에 `routes`(보관본 언어 전환용). 영어 안내 페이지는 결제 문구 없어 그대로
 - 왜: 앱 0.2.1(versionCode 3)에서 Google Play 결제("광고 없이 부활" 패스) 제거. 사용자가 "지금 → 바꾼 뒤" 표와 시행일 A안(게시일 즉시 시행 + 변경 이력 + 이전 버전 보관) 승인. 원본 `Redpen-game/hosting/public/privacy/index.html`·`store/privacy-policy.md` 도 같은 본문으로 맞춤(그 저장소는 커밋 안 함)
